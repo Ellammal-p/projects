@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENT LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-success text-center">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="col-md-2">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <h1 class="text-center">STUDENT LIST</h1>
+        <table class="table table-striped table-bordered border-info table-hover table-responsive">
+                <thead class="table-success">
+                    <tr>
+                        <th><a class="btn btn-dark" href="/">+ADD NEW</a></th>
+                       <th>ID</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>MOBILE NO</th>
+                    </tr>
+                </thead>
+            {% for row in list %}
+                <tr>
+                    <td>
+                        <a href="/edit/{{row.id}}"><i class="bi bi-pencil-square"></i></a> |
+                        <a href="/delete/{{row.id}}" onclick="return confirm('are you sure to delete?..')"><i class="bi bi-trash"></i></a>
+                    </td>
+                    <td class="table-active">{{row.id}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.email}}</td>
+                    <td>{{row.mobile}}</td>
+                </tr>
+            {% endfor %}
+    </table>
+    </div>
+</body>
+</html>
