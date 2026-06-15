@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Login</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/quiz_page.css' %}" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-shell">
+        <div class="login-grid">
+            <div class="login-box">
+                <h3 class="text-center mb-3">Student Login</h3>
+                <p class="text-center text-white-50 small mb-4">Use a student ID and password.</p>
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}info{% endif %} text-center">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+                <form method="post" action="{% url 'do_login_student' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="student_id" class="form-label">Student ID</label>
+                        <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Enter student ID" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="student_password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="student_password" name="student_password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 login-btn">Student Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

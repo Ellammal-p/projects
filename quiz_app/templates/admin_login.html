@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/quiz_page.css' %}" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-shell">
+        <div class="login-box">
+            <h3 class="text-center mb-3">Admin Login</h3>
+            <p class="text-center text-white-50 small mb-4">Use only admin credentials.</p>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}info{% endif %} text-center">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            <form method="post" action="{% url 'do_login_admin' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="admin_id" class="form-label">Admin ID</label>
+                    <input type="text" class="form-control" id="admin_id" name="admin_id" placeholder="Enter admin ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="admin_password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="admin_password" name="admin_password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 login-btn">Admin Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
