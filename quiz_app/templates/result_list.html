@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Results</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Poppins,sans-serif;
+        }
+        body{
+            min-height:100vh;
+            padding:40px;
+            background:linear-gradient(135deg,#7b2ff7,#3f5efb,#00c6ff);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .container{
+            width:90%;
+            max-width:1000px;
+            background:rgba(255,255,255,0.12);
+            backdrop-filter:blur(15px);
+            border-radius:20px;
+            padding:30px;
+            box-shadow:0 8px 32px rgba(0,0,0,.2);
+        }
+        h1{
+            text-align:center;
+            color:white;
+            margin-bottom:25px;
+        }
+        table{
+            width:100%;
+            border-collapse:collapse;
+            overflow:hidden;
+            border-radius:15px;
+        }
+        th{
+            background:rgba(255,255,255,.2);
+            color:white;
+            padding:15px;
+        }
+        td{
+            background:rgba(255,255,255,.1);
+            color:white;
+            text-align:center;
+            padding:12px;
+        }
+        tr:hover td{
+            background:rgba(255,255,255,.2);
+            transition:.3s;
+        }
+        .correct{
+            color:#22C55E;
+            font-weight:bold;
+        }
+        .wrong{
+            color:#EF4444;
+            font-weight:bold;
+        }
+        .top-card{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:20px;
+        }
+        .card{
+            width:48%;
+            padding:20px;
+            border-radius:15px;
+            text-align:center;
+            color:white;
+            background:rgba(255,255,255,.15);
+        }
+        .card h2{
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📊 Quiz Performance Report</h1>
+
+    <div class="top-card">
+    <div class="card">
+        <h2>Total Questions</h2>
+        <h1>{{ results|length }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>Total Score</h2>
+        <h1>{{ total_score|floatformat:"-2" }}/10</h1>
+    </div>
+</div>
+
+    <table>
+        <tr>
+            <th>Q.No</th>
+            <th>Your Answer</th>
+            <th>Correct Answer</th>
+            <th>Attempts</th>
+            <th>Marks</th>
+        </tr>
+        {% for r in results %}
+        <tr>
+            <td>{{ r.question_no }}</td>
+            <td>{{ r.user_answer|floatformat:"-2" }}</td>
+            <td>{{ r.correct_answer|floatformat:"-2" }}</td>
+            <td>{{ r.attempts_used }}</td>
+            <td>{{ r.marks_scored|floatformat:"-2" }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
