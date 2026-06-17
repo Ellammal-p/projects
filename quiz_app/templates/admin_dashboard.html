@@ -11,17 +11,23 @@
 <body class="login-page">
     <div class="login-shell">
         <div class="login-box" style="max-width:700px; padding:24px; border-radius:24px;">
-            <h3 class="text-center mb-2">Admin Dashboard</h3>
-            <p class="text-center text-white-50 small mb-3">Create student profiles and view generated credentials.</p>
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %} text-center">{{ message }}</div>
-                {% endfor %}
-            {% endif %}
-
-            <div class="d-flex justify-content-end mb-2">
-                <a href="{% url 'student_list_page' %}" class="btn btn-outline-light">View Student List</a>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="mb-0">Add Student</h3>
+                <div class="d-flex gap-2">
+                    <a href="{% url 'logout_user' %}" class="btn btn-outline-secondary btn-sm">Logout</a>
+                    <a href="{% url 'student_list_page' %}" class="btn btn-danger">View Student List</a>
+                </div>
             </div>
+            {% if messages %}
+                <div class="flash-message">
+                    {% for message in messages %}
+                        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %} mb-2" role="alert">
+                            <span>{{ message }}</span>
+                            <button type="button" class="close-btn" aria-label="Close" onclick="this.parentElement.remove();">&times;</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
 
             <form method="post" action="{% url 'create_student_profile' %}" class="mb-3">
                 {% csrf_token %}
@@ -40,5 +46,13 @@
 
         </div>
     </div>
+    <script>
+        setTimeout(function () {
+            document.querySelectorAll('.flash-message .alert').forEach(function (el) {
+                el.classList.add('fade');
+                setTimeout(function () { el.remove(); }, 300);
+            });
+        }, 3000);
+    </script>
 </body>
 </html>

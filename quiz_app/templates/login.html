@@ -13,11 +13,15 @@
         <div class="login-grid">
             <div class="login-box">
                 <h3 class="text-center mb-3">Student Login</h3>
-                <p class="text-center text-white-50 small mb-4">Use a student ID and password.</p>
                 {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}info{% endif %} text-center">{{ message }}</div>
-                    {% endfor %}
+                    <div class="flash-message">
+                        {% for message in messages %}
+                            <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}success{% endif %} mb-2" role="alert">
+                                <span>{{ message }}</span>
+                                <button type="button" class="close-btn" aria-label="Close" onclick="this.parentElement.remove();">&times;</button>
+                            </div>
+                        {% endfor %}
+                    </div>
                 {% endif %}
                 <form method="post" action="{% url 'do_login_student' %}">
                     {% csrf_token %}
@@ -29,10 +33,18 @@
                         <label for="student_password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="student_password" name="student_password" placeholder="Enter password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 login-btn">Student Login</button>
+                    <button type="submit" class="btn btn-primary w-100 login-btn">Login</button>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        setTimeout(function () {
+            document.querySelectorAll('.flash-message .alert').forEach(function (el) {
+                el.classList.add('fade');
+                setTimeout(function () { el.remove(); }, 300);
+            });
+        }, 3000);
+    </script>
 </body>
 </html>

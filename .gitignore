@@ -1,6 +1,19 @@
+# Python
 __pycache__/
 *.py[cod]
-*.sqlite3
-*.db
-.idea/
+
+# Virtual Environment
+.venv/
+venv/
+
+# Django
+db.sqlite3
+
+# VS Code
 .vscode/
+
+# PyCharm
+.idea/
+
+# Static cache
+*.log
