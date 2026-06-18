@@ -2,6 +2,7 @@ from django.db import models
 
 
 class QuizResult(models.Model):
+    student = models.ForeignKey('StudentProfile', on_delete=models.CASCADE, null=True, blank=True)
     question_no = models.IntegerField()
     attempts_used = models.IntegerField()
     marks_scored = models.FloatField()

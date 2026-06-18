@@ -138,7 +138,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 
         let rec=document.getElementById("result");
         rec.innerHTML ="✅ Correct";
-        rec.style.color= "#FFF";
+        rec.style.color= "#15e665";
 
             let marks = 0;
 

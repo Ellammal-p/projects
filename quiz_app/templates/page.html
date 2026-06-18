@@ -1,46 +1,245 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>QUIZ APPLICATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Quiz App</title>
     {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="icon" href="{% static 'favicon.ico' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{% static 'css/quiz_page.css' %}" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            height: 100%; font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2c1e 0%, #1a5c3a 60%, #22c55e 100%);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 100vh; padding: 20px;
+        }
+
+        /* Header bar */
+        .quiz-header {
+            width: 100%; max-width: 520px;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 20px;
+        }
+        .hdr-pill {
+            background: rgba(255,255,255,0.15); color: #fff;
+            padding: 8px 18px; border-radius: 30px; font-size: 0.85rem; font-weight: 600;
+            display: flex; align-items: center; gap: 6px; backdrop-filter: blur(6px);
+        }
+
+        /* Quiz card */
+        .quiz-card {
+            background: #fff; border-radius: 24px;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+            padding: 40px 44px; width: 100%; max-width: 520px;
+        }
+
+        .quiz-number {
+            font-size: 0.78rem; font-weight: 700; color: #16a34a;
+            letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;
+        }
+        .progress-bar-wrap {
+            width: 100%; height: 5px; background: #e2e8f0; border-radius: 10px; margin-bottom: 30px;
+        }
+        .progress-bar-fill { height: 5px; background: linear-gradient(90deg,#16a34a,#4ade80); border-radius: 10px; transition: width 0.4s ease; }
+
+        /* Equation display */
+        .equation {
+            display: flex; align-items: center; justify-content: center;
+            gap: 18px; margin-bottom: 32px; flex-wrap: wrap;
+        }
+        .eq-box {
+            background: linear-gradient(135deg,#f0fdf4,#dcfce7);
+            border: 2px solid #bbf7d0; border-radius: 16px;
+            width: 72px; height: 72px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem; font-weight: 800; color: #166534;
+        }
+        .eq-op {
+            font-size: 1.8rem; font-weight: 800; color: #64748b;
+        }
+        .eq-ans {
+            background: linear-gradient(135deg,#fffbeb,#fef9c3);
+            border: 2px dashed #fbbf24; border-radius: 16px;
+        }
+
+        /* Answer input */
+        .answer-wrap { margin-bottom: 20px; }
+        .answer-wrap label { font-size: 0.82rem; font-weight: 600; color: #374151; margin-bottom: 8px; display: block; }
+        .answer-input {
+            width: 100%; padding: 14px 18px; border: 2px solid #e2e8f0;
+            border-radius: 14px; font-size: 1.1rem; font-weight: 600;
+            font-family: 'Poppins', sans-serif; text-align: center;
+            color: #1e3a5f; transition: border 0.15s, box-shadow 0.15s;
+        }
+        .answer-input:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.12); outline: none; }
+
+        /* Result text */
+        .result-text { text-align: center; font-size: 0.95rem; font-weight: 600; min-height: 26px; margin-bottom: 20px; }
+
+        /* Submit button */
+        .btn-submit {
+            width: 100%; padding: 14px; border-radius: 14px;
+            background: linear-gradient(90deg,#166534,#16a34a);
+            color: #fff; font-weight: 700; font-size: 1rem;
+            border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            transition: opacity 0.15s, transform 0.15s;
+        }
+        .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* Finished screen */
+        .finished {
+            text-align: center; padding: 10px 0;
+        }
+        .finished h2 { font-size: 1.5rem; font-weight: 800; color: #166534; margin-bottom: 8px; }
+        .finished .score-display {
+            font-size: 3rem; font-weight: 800; color: #16a34a; margin: 16px 0;
+        }
+        .finished p { color: #64748b; font-size: 0.9rem; margin-bottom: 28px; }
+        .btn-results {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 32px; border-radius: 14px;
+            background: linear-gradient(90deg,#166534,#16a34a);
+            color: #fff; font-weight: 700; font-size: 0.95rem;
+            border: none; cursor: pointer; text-decoration: none;
+            transition: opacity 0.15s, transform 0.15s;
+        }
+        .btn-results:hover { opacity: 0.9; transform: translateY(-1px); color: #fff; }
+    </style>
 </head>
 <body>
-    <div class="app">
 
-        <div class="d-flex justify-content-between">
-            <h6 id="attempt">🎯 Attempts Left : 3</h6>
-            <h6 id="score">🏆 Score : 0</h6>
+    <!-- Score & Attempts header -->
+    <div class="quiz-header">
+        <div class="hdr-pill"><i class="bi bi-arrow-repeat"></i> <span id="attempt">Attempts Left: 3</span></div>
+        <div class="hdr-pill"><i class="bi bi-trophy-fill"></i> <span id="score">Score: 0</span></div>
+    </div>
+
+    <!-- Quiz Card -->
+    <div class="quiz-card">
+        <div class="quiz-number" id="qno">QUESTION 1 OF 10</div>
+        <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="progressBar" style="width:10%;"></div>
         </div>
 
-        <h6 id="qno" class="border-bottom p-3 text-center">
-            QUIZ NO : 1
-        </h6>
-
-        <div class="quiz">
-
-            <div class="ques d-flex gap-3 mt-5">
-                <div id="num1" class="btn border"></div>
-                <div id="op" class="fs-3"></div>
-                <div id="num2" class="btn border"></div>
-                <div class="fs-3">=</div>
-                <div id="quesM" class="btn border">?</div>
+        <div class="app">
+            <div class="equation">
+                <div class="eq-box" id="num1"></div>
+                <div class="eq-op"  id="op"></div>
+                <div class="eq-box" id="num2"></div>
+                <div class="eq-op">=</div>
+                <div class="eq-box eq-ans" id="quesM">?</div>
             </div>
 
-            <div class="ans_b mt-5">
-                <input required id="check_ans" type="text" class="form-control" placeholder="Answer">
+            <div class="answer-wrap">
+                <label>Your Answer</label>
+                <input id="check_ans" type="text" class="answer-input" placeholder="Type your answer here…">
             </div>
 
-            <p id="result" class="mt-3 text-center"></p>
+            <p class="result-text" id="result"></p>
 
-            <div class="text-center mt-4">
-                <button id="submitBtn" type="button" class="btn btn-outline-secondary">Submit</button>
-            </div>
+            <button id="submitBtn" type="button" class="btn-submit">
+                <i class="bi bi-check-circle-fill"></i> Submit Answer
+            </button>
         </div>
     </div>
-    <script src="{% static 'js/quiz_page.js' %}"></script>
+
+    <script>
+        let questionNo = 1, score = 0, attempt = 0, correctAnswer = 0;
+        const questions = [
+            {a:5,  b:5,  op:'+'}, {a:10, b:3,  op:'-'},
+            {a:4,  b:6,  op:'*'}, {a:20, b:5,  op:'/'},
+            {a:8,  b:2,  op:'+'}, {a:15, b:4,  op:'-'},
+            {a:3,  b:7,  op:'*'}, {a:18, b:3,  op:'/'},
+            {a:9,  b:8,  op:'+'}, {a:25, b:5,  op:'/'}
+        ];
+
+        function loadQuestion() {
+            const q = questions[questionNo - 1];
+            document.getElementById('num1').textContent = q.a;
+            document.getElementById('num2').textContent = q.b;
+            document.getElementById('op').textContent   = q.op;
+            document.getElementById('quesM').textContent = '?';
+            correctAnswer = q.op === '+' ? q.a+q.b : q.op === '-' ? q.a-q.b : q.op === '*' ? q.a*q.b : q.a/q.b;
+            attempt = 0;
+            document.getElementById('attempt').textContent = 'Attempts Left: 3';
+            document.getElementById('qno').textContent = `QUESTION ${questionNo} OF 10`;
+            document.getElementById('progressBar').style.width = (questionNo * 10) + '%';
+            document.getElementById('result').textContent = '';
+            document.getElementById('check_ans').value = '';
+        }
+
+        function nextQuestion() {
+            questionNo++;
+            document.getElementById('score').textContent = 'Score: ' + score;
+            if (questionNo > 10) {
+                document.querySelector('.app').innerHTML = `
+                    <div class="finished">
+                        <div style="font-size:2.5rem;">🎉</div>
+                        <h2>Quiz Finished!</h2>
+                        <div class="score-display">${score}<span style="font-size:1.4rem;color:#64748b;">/10</span></div>
+                        <p>Great job! Click below to view your detailed results.</p>
+                        <a href="/results/" class="btn-results">
+                            <i class="bi bi-bar-chart-fill"></i> View My Results
+                        </a>
+                    </div>`;
+                return;
+            }
+            loadQuestion();
+        }
+
+        function getCookie(name) {
+            for (const c of document.cookie.split(';')) {
+                const t = c.trim();
+                if (t.startsWith(name+'=')) return decodeURIComponent(t.substring(name.length+1));
+            }
+            return null;
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            const input  = document.getElementById('check_ans');
+            const result = document.getElementById('result');
+            if (!input.value.trim()) { result.textContent='⚠️ Please enter an answer'; result.style.color='#f59e0b'; return; }
+            if (!/^[-]?\d*\.?\d+$/.test(input.value.trim())) { result.textContent='⚠️ Numbers only'; result.style.color='#f59e0b'; return; }
+
+            const ans = parseFloat(input.value);
+            attempt++;
+            document.getElementById('attempt').textContent = 'Attempts Left: ' + Math.max(0, 3-attempt);
+
+            if (Math.abs(ans - correctAnswer) < 0.0001) {
+                const marks = attempt===1 ? 1 : attempt===2 ? 0.5 : 0.25;
+                score += marks;
+                result.textContent = '✅ Correct!'; result.style.color = '#16a34a';
+                fetch('/save-result/', {
+                    method:'POST',
+                    headers:{'Content-Type':'application/json','X-CSRFToken':getCookie('csrftoken')},
+                    body:JSON.stringify({question_no:questionNo,attempts_used:attempt,marks_scored:marks,correct_answer:correctAnswer,user_answer:ans})
+                });
+                setTimeout(nextQuestion, 900);
+            } else {
+                if (attempt >= 3) {
+                    result.textContent = '❌ Wrong! Moving on…'; result.style.color='#ef4444';
+                    fetch('/save-result/', {
+                        method:'POST',
+                        headers:{'Content-Type':'application/json','X-CSRFToken':getCookie('csrftoken')},
+                        body:JSON.stringify({question_no:questionNo,attempts_used:attempt,marks_scored:0,correct_answer:correctAnswer,user_answer:ans})
+                    });
+                    setTimeout(nextQuestion, 1400);
+                } else {
+                    result.textContent = '❌ Wrong. Try again!'; result.style.color='#ef4444';
+                }
+            }
+        });
+
+        // Allow Enter key to submit
+        document.getElementById('check_ans').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') document.getElementById('submitBtn').click();
+        });
+
+        fetch('/reset-quiz/');
+        loadQuestion();
+    </script>
 </body>
 </html>

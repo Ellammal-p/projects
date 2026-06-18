@@ -17,4 +17,5 @@ urlpatterns = [
     path('save-result/', views.save_result, name='save_result'),
     path('results/', views.result_list, name='results'),
     path('reset-quiz/', views.reset_quiz, name='reset_quiz'),
+    path('admin-reset-student/<str:student_id>/', views.admin_reset_student, name='admin_reset_student'),
 ]
