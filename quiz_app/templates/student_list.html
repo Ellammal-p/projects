@@ -36,10 +36,10 @@
         }
         .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
         .nav-links .btn-logout {
-            background: rgba(239,68,68,0.18); color: #fca5a5;
-            border: 1px solid rgba(239,68,68,0.35); margin-left: 6px;
+            background: #dc2626; color: #fff;
+            border: 1px solid #b91c1c; margin-left: 6px;
         }
-        .nav-links .btn-logout:hover { background: rgba(239,68,68,0.35); color: #fff; }
+        .nav-links .btn-logout:hover { background: #b91c1c; color: #fff; }
 
         /* PAGE WRAPPER */
         .page-wrapper { display: flex; height: calc(100vh - 60px); margin-top: 60px; }
@@ -96,6 +96,62 @@
         .badge-id { background: #eff6ff; color: #2563eb; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; display: inline-block; }
         .badge-pw { background: #f0fdf4; color: #15803d; padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; font-family: monospace; display: inline-block; }
         .empty-row td { text-align: center; padding: 48px; color: #94a3b8; }
+
+        /* Action buttons */
+        .action-btns { display: flex; gap: 8px; justify-content: center; }
+        .btn-edit, .btn-delete {
+            display: inline-flex; align-items: center; gap: 5px;
+            padding: 6px 14px; border-radius: 8px; font-size: 0.78rem; font-weight: 600;
+            border: none; cursor: pointer; text-decoration: none;
+            transition: background 0.15s, transform 0.1s;
+        }
+        .btn-edit { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+        .btn-edit:hover { background: #dbeafe; transform: translateY(-1px); }
+        .btn-delete { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .btn-delete:hover { background: #fee2e2; transform: translateY(-1px); }
+
+        /* Modal overlay */
+        .modal-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.45); z-index: 9999;
+            align-items: center; justify-content: center;
+        }
+        .modal-overlay.show { display: flex; }
+        .modal-box {
+            background: #fff; border-radius: 20px; padding: 32px 36px;
+            width: 100%; max-width: 440px;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+            animation: modalIn 0.25s ease;
+        }
+        @keyframes modalIn { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+        .modal-box h3 { font-size: 1.15rem; font-weight: 700; color: #1e3a5f; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+        .modal-box label { font-size: 0.82rem; font-weight: 600; color: #374151; margin-bottom: 6px; display: block; }
+        .modal-box input {
+            width: 100%; padding: 10px 14px; border: 1.5px solid #e2e8f0;
+            border-radius: 10px; font-size: 0.9rem; font-family: 'Poppins', sans-serif;
+            margin-bottom: 14px; transition: border 0.15s;
+        }
+        .modal-box input:focus { border-color: #2563eb; outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+        .modal-actions { display: flex; gap: 10px; margin-top: 8px; }
+        .modal-actions button {
+            flex: 1; padding: 11px; border-radius: 10px; font-weight: 600; font-size: 0.88rem;
+            border: none; cursor: pointer; transition: opacity 0.15s;
+        }
+        .modal-btn-cancel { background: #f1f5f9; color: #475569; }
+        .modal-btn-cancel:hover { background: #e2e8f0; }
+        .modal-btn-save { background: linear-gradient(90deg, #1e3a5f, #2563eb); color: #fff; }
+        .modal-btn-save:hover { opacity: 0.9; }
+
+        /* Toast */
+        .toast-wrap { position: fixed; top: 76px; right: 24px; z-index: 99999; }
+        .toast-box {
+            background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 10px;
+            padding: 14px 20px; display: flex; align-items: center; gap: 10px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.12); min-width: 270px;
+            animation: slideIn 0.3s ease;
+        }
+        .toast-box.error { background: #fef2f2; border-left-color: #ef4444; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
     </style>
 </head>
 <body>
@@ -107,12 +163,21 @@
             <span>Quiz Admin</span>
         </a>
         <div class="nav-links">
-            <a href="{% url 'main_dashboard' %}"><i class="bi bi-speedometer2"></i> Dashboard</a>
-            <a href="{% url 'student_list_page' %}" class="active"><i class="bi bi-people"></i> Student List</a>
-            <a href="{% url 'admin_dashboard' %}"><i class="bi bi-person-plus"></i> Add Student</a>
             <a href="{% url 'logout_user' %}" class="btn-logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
     </nav>
+
+    <!-- Toast messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="toast-wrap" id="toast">
+                <div class="toast-box {% if message.tags == 'error' %}error{% endif %}">
+                    <i class="bi bi-check-circle-fill" style="color:#22c55e; font-size:1.2rem;"></i>
+                    <span style="font-size:0.88rem; font-weight:600; color:#166534;">{{ message }}</span>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
 
     <div class="page-wrapper">
         <!-- SIDEBAR -->
@@ -147,20 +212,34 @@
                             <th>Email</th>
                             <th>Student ID</th>
                             <th>Password</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {% for student in students %}
+                        {% for item in student_data %}
                         <tr>
                             <td class="num-cell">{{ forloop.counter }}</td>
-                            <td class="name-cell">{{ student.name }}</td>
-                            <td>{{ student.email }}</td>
-                            <td><span class="badge-id">{{ student.student_id }}</span></td>
-                            <td><span class="badge-pw">{{ student.password }}</span></td>
+                            <td class="name-cell">{{ item.obj.name }}</td>
+                            <td>{{ item.obj.email }}</td>
+                            <td><span class="badge-id">{{ item.obj.student_id }}</span></td>
+                            <td><span class="badge-pw">{{ item.obj.password }}</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-edit" onclick="openEditModal('{{ item.obj.student_id }}', '{{ item.obj.name }}', '{{ item.obj.email }}')">
+                                        <i class="bi bi-pencil-square"></i> Edit
+                                    </button>
+                                    <form method="post" action="{% url 'delete_student' item.obj.student_id %}" style="margin:0;" onsubmit="return confirm('Are you sure you want to delete {{ item.obj.name }}? This will also remove all their quiz results.');">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn-delete">
+                                            <i class="bi bi-trash3"></i> Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                         {% empty %}
                         <tr class="empty-row">
-                            <td colspan="5">
+                            <td colspan="6">
                                 <i class="bi bi-inbox" style="font-size:2rem; display:block; margin-bottom:8px;"></i>
                                 No student profiles found.
                             </td>
@@ -172,5 +251,43 @@
         </main>
     </div>
 
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="editModal">
+        <div class="modal-box">
+            <h3><i class="bi bi-pencil-square" style="color:#2563eb;"></i> Edit Student</h3>
+            <form method="post" id="editForm">
+                {% csrf_token %}
+                <label>Student Name</label>
+                <input type="text" name="name" id="editName" required>
+                <label>Email</label>
+                <input type="email" name="email" id="editEmail" required>
+                <div class="modal-actions">
+                    <button type="button" class="modal-btn-cancel" onclick="closeEditModal()">Cancel</button>
+                    <button type="submit" class="modal-btn-save">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openEditModal(studentId, name, email) {
+            document.getElementById('editName').value = name;
+            document.getElementById('editEmail').value = email;
+            document.getElementById('editForm').action = '/edit-student/' + studentId + '/';
+            document.getElementById('editModal').classList.add('show');
+        }
+        function closeEditModal() {
+            document.getElementById('editModal').classList.remove('show');
+        }
+        // Close modal on overlay click
+        document.getElementById('editModal').addEventListener('click', function(e) {
+            if (e.target === this) closeEditModal();
+        });
+        // Auto-dismiss toast
+        setTimeout(function () {
+            const t = document.getElementById('toast');
+            if (t) { t.style.transition = 'opacity 0.4s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }
+        }, 3000);
+    </script>
 </body>
 </html>

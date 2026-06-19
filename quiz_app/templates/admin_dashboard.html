@@ -36,10 +36,10 @@
         }
         .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
         .nav-links .btn-logout {
-            background: rgba(239,68,68,0.18); color: #fca5a5;
-            border: 1px solid rgba(239,68,68,0.35); margin-left: 6px;
+            background: #dc2626; color: #fff;
+            border: 1px solid #b91c1c; margin-left: 6px;
         }
-        .nav-links .btn-logout:hover { background: rgba(239,68,68,0.35); color: #fff; }
+        .nav-links .btn-logout:hover { background: #b91c1c; color: #fff; }
 
         /* PAGE WRAPPER */
         .page-wrapper { display: flex; height: calc(100vh - 60px); margin-top: 60px; }
@@ -119,9 +119,6 @@
             <span>Quiz Admin</span>
         </a>
         <div class="nav-links">
-            <a href="{% url 'main_dashboard' %}"><i class="bi bi-speedometer2"></i> Dashboard</a>
-            <a href="{% url 'student_list_page' %}"><i class="bi bi-people"></i> Student List</a>
-            <a href="{% url 'admin_dashboard' %}" class="active"><i class="bi bi-person-plus"></i> Add Student</a>
             <a href="{% url 'logout_user' %}" class="btn-logout"><i class="bi bi-box-arrow-right"></i> Logout</a>
         </div>
     </nav>

@@ -11,6 +11,21 @@ from .models import QuizResult, StudentProfile
 # ─── Pass threshold ────────────────────────────────────────────
 PASS_PERCENTAGE = 50   # student passes if score% >= 50 (5/10)
 
+# ─── Quiz questions (mirrored from page.html JS) ──────────────
+QUESTIONS = [
+    {'num': 1,  'a': 5,  'b': 5, 'op': '+', 'answer': 10, 'options': [8, 10, 12, 15]},
+    {'num': 2,  'a': 10, 'b': 3, 'op': '-', 'answer': 7,  'options': [5, 7, 9, 13]},
+    {'num': 3,  'a': 4,  'b': 6, 'op': '*', 'answer': 24, 'options': [18, 20, 24, 28]},
+    {'num': 4,  'a': 20, 'b': 5, 'op': '/', 'answer': 4,  'options': [3, 4, 5, 10]},
+    {'num': 5,  'a': 8,  'b': 2, 'op': '+', 'answer': 10, 'options': [6, 8, 10, 12]},
+    {'num': 6,  'a': 15, 'b': 4, 'op': '-', 'answer': 11, 'options': [9, 11, 13, 19]},
+    {'num': 7,  'a': 3,  'b': 7, 'op': '*', 'answer': 21, 'options': [10, 15, 21, 27]},
+    {'num': 8,  'a': 18, 'b': 3, 'op': '/', 'answer': 6,  'options': [3, 6, 9, 15]},
+    {'num': 9,  'a': 9,  'b': 8, 'op': '+', 'answer': 17, 'options': [12, 15, 17, 19]},
+    {'num': 10, 'a': 25, 'b': 5, 'op': '/', 'answer': 5,  'options': [4, 5, 7, 20]},
+]
+OP_SYMBOLS = {'+': '+', '-': '−', '*': '×', '/': '÷'}
+
 
 # ─── Session-based decorators ──────────────────────────────────
 
@@ -170,6 +185,34 @@ def student_list_page(request):
 
 
 @admin_required
+def edit_student(request, student_id):
+    """Admin edits a student's name and email."""
+    student = get_object_or_404(StudentProfile, student_id=student_id)
+    if request.method == 'POST':
+        name  = request.POST.get('name', '').strip()
+        email = request.POST.get('email', '').strip()
+        if name:
+            student.name = name
+        if email:
+            student.email = email
+        student.save()
+        messages.success(request, f'✅ {student.name}\'s profile has been updated.')
+    return redirect('student_list_page')
+
+
+@admin_required
+def delete_student(request, student_id):
+    """Admin deletes a student profile and their quiz results."""
+    if request.method == 'POST':
+        student = get_object_or_404(StudentProfile, student_id=student_id)
+        student_name = student.name
+        QuizResult.objects.filter(student=student).delete()
+        student.delete()
+        messages.success(request, f'🗑️ {student_name}\'s profile has been deleted.')
+    return redirect('student_list_page')
+
+
+@admin_required
 def admin_reset_student(request, student_id):
     """
     Admin resets a specific student's quiz results so they can retake the exam.
@@ -190,9 +233,82 @@ def admin_reset_student(request, student_id):
 
 # ─── Student views ─────────────────────────────────────────────
 
+@student_required
+def student_dashboard(request):
+    """Student dashboard showing quiz results with question details."""
+    student_id = request.session.get('student_id')
+    student = StudentProfile.objects.filter(student_id=student_id).first()
+    results = QuizResult.objects.filter(student=student).order_by('question_no')
+
+    has_taken = results.exists()
+    total_score = 0
+    percentage = 0
+    passed = False
+    question_data = []
+    correct_count = 0
+    wrong_count = 0
+
+    if has_taken:
+        total_score = results.aggregate(Sum('marks_scored'))['marks_scored__sum'] or 0
+        percentage = round((total_score / 10.0) * 100, 1)
+        if float(percentage).is_integer():
+            percentage = int(percentage)
+        passed = percentage >= PASS_PERCENTAGE
+
+        for r in results:
+            q_idx = r.question_no - 1
+            if 0 <= q_idx < len(QUESTIONS):
+                q = QUESTIONS[q_idx]
+                correct = q['answer']
+                user_ans_int = int(r.user_answer) if r.user_answer == int(r.user_answer) else r.user_answer
+                is_correct = abs(r.user_answer - correct) < 0.001
+
+                if is_correct:
+                    correct_count += 1
+                else:
+                    wrong_count += 1
+
+                option_labels = ['A', 'B', 'C', 'D']
+                labeled_options = []
+                for i, opt in enumerate(q['options']):
+                    labeled_options.append({
+                        'label': option_labels[i],
+                        'value': opt,
+                        'is_correct': opt == correct,
+                        'is_user_wrong': opt == user_ans_int and not is_correct,
+                    })
+
+                question_data.append({
+                    'question_no': r.question_no,
+                    'a': q['a'],
+                    'b': q['b'],
+                    'op': q['op'],
+                    'op_symbol': OP_SYMBOLS.get(q['op'], q['op']),
+                    'correct_answer': correct,
+                    'user_answer': user_ans_int,
+                    'marks_scored': r.marks_scored,
+                    'attempts_used': r.attempts_used,
+                    'is_correct': is_correct,
+                    'options': labeled_options,
+                })
+
+    context = {
+        'student': student,
+        'has_taken': has_taken,
+        'total_score': total_score,
+        'percentage': percentage,
+        'passed': passed,
+        'correct_count': correct_count,
+        'wrong_count': wrong_count,
+        'question_data': question_data,
+        **get_student_context(request),
+    }
+    return render(request, 'student_dashboard.html', context)
+
+
 def login_page(request):
     if request.session.get('student_id'):
-        return redirect('quiz_page')
+        return redirect('student_dashboard')
     return render(request, 'login.html')
 
 
@@ -210,7 +326,7 @@ def do_login_student(request):
             request.session['student_name']  = student.name
             request.session['student_email'] = student.email
             messages.success(request, f'Welcome, {student.name}!')
-            return redirect('quiz_page')
+            return redirect('student_dashboard')
 
         messages.error(request, 'Invalid student ID or password.')
     return redirect('student_login_page')
@@ -230,7 +346,7 @@ def quiz_page(request):
             request,
             'You have already completed the quiz. Here are your results.'
         )
-        return redirect('results')
+        return redirect('student_dashboard')
 
     context = get_student_context(request)
     return render(request, 'page.html', context)

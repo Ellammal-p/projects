@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Quiz App</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navbar */
+        .navbar-custom {
+            background-color: #111827; /* Dark tailwind gray */
+            padding: 14px 28px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .navbar-brand-custom {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #ffffff !important;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar-brand-custom .logo-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+        .btn-logout-custom {
+            background-color: #dc2626;
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 1px solid #dc2626;
+            padding: 8px 18px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .btn-logout-custom:hover {
+            background-color: #b91c1c;
+            border-color: #b91c1c;
+            transform: translateY(-1px);
+        }
+
+        /* Main Wrap */
+        .dashboard-container {
+            flex: 1;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Title Area */
+        .welcome-title {
+            font-weight: 800;
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .welcome-subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        /* Cards */
+        .glass-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            padding: 30px;
+            height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .glass-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+        }
+
+        .card-header-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #f0fdf4;
+            color: #16a34a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        .card-header-icon.profile-icon {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+        .card-title-custom {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        /* Info Item */
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            color: #64748b;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .info-value {
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Stat Rings / Highlights */
+        .score-large {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #16a34a;
+            line-height: 1.1;
+        }
+        .score-large span {
+            font-size: 1.3rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        .score-large.failed {
+            color: #ef4444;
+        }
+
+        /* Custom Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .status-badge.passed {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+        .status-badge.failed {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .status-badge.pending {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
+
+        /* Start Quiz Button */
+        .btn-start-quiz {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white !important;
+            font-weight: 700;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-start-quiz:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Question breakdown container */
+        .breakdown-section {
+            margin-top: 40px;
+        }
+        .breakdown-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        /* Custom List/Table of Questions */
+        .question-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .question-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .question-header {
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: #ffffff;
+            cursor: pointer;
+        }
+
+        .q-title-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .q-number-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .question-card.correct .q-number-badge {
+            background: #dcfce7;
+            color: #15803d;
+        }
+        .question-card.wrong .q-number-badge {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .eq-display {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 1.1rem;
+        }
+
+        .q-badges {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badge-marks {
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .badge-marks.correct {
+            background: #ecfdf5;
+            color: #059669;
+        }
+        .badge-marks.wrong {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .btn-view-options {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #2563eb;
+            background: #eff6ff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 8px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-view-options:hover {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        /* Collapse content styling */
+        .q-collapse-content {
+            padding: 24px;
+            background: #f8fafc;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        /* 4 options grid */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .option-item {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+            color: #334155;
+            position: relative;
+        }
+        .option-item .opt-lbl {
+            font-weight: 700;
+            color: #64748b;
+            margin-right: 8px;
+        }
+
+        /* Correct option styling */
+        .option-item.opt-correct {
+            border-color: #10b981;
+            background-color: #f0fdf4;
+            color: #065f46;
+        }
+        .option-item.opt-correct .opt-lbl {
+            color: #059669;
+        }
+
+        /* User wrong choice styling */
+        .option-item.opt-wrong-user {
+            border-color: #ef4444;
+            background-color: #fef2f2;
+            color: #991b1b;
+        }
+        .option-item.opt-wrong-user .opt-lbl {
+            color: #dc2626;
+        }
+
+        /* Icons inside options */
+        .option-status-icon {
+            font-size: 1.1rem;
+        }
+        .option-status-icon.correct {
+            color: #10b981;
+        }
+        .option-status-icon.wrong {
+            color: #ef4444;
+        }
+
+        /* Feedback box */
+        .feedback-box {
+            margin-top: 20px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .feedback-box.correct {
+            background: #ecfdf5;
+            color: #047857;
+            border-left: 4px solid #10b981;
+        }
+        .feedback-box.wrong {
+            background: #fff5f5;
+            color: #c53030;
+            border-left: 4px solid #f56565;
+        }
+
+        /* Toast container */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-dark navbar-custom">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a class="navbar-brand navbar-brand-custom" href="#">
+                <div class="logo-badge">Q</div>
+                <span>Quiz App</span>
+            </a>
+            <div>
+                <a href="{% url 'logout_user' %}" class="btn btn-logout-custom">
+                    <i class="bi bi-box-arrow-right me-2"></i>Logout
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <div class="dashboard-container">
+        
+        <!-- Toast notifications -->
+        {% if messages %}
+            <div class="toast-container">
+                {% for message in messages %}
+                    <div class="toast show align-items-center text-white bg-{% if message.tags == 'error' %}danger{% else %}success{% endif %} border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="d-flex">
+                            <div class="toast-body">
+                                <i class="bi {% if message.tags == 'error' %}bi-exclamation-triangle-fill{% else %}bi-check-circle-fill{% endif %} me-2"></i>
+                                {{ message }}
+                            </div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Welcome Banner -->
+        <div>
+            <h1 class="welcome-title">Welcome back, {{ session_student_name }}!</h1>
+            <p class="welcome-subtitle">Here is your student dashboard where you can see your profile and exam results.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Profile Info Card -->
+            <div class="col-md-5 col-lg-4">
+                <div class="glass-card">
+                    <div class="card-header-icon profile-icon">
+                        <i class="bi bi-person-badge-fill"></i>
+                    </div>
+                    <h3 class="card-title-custom">Student Information</h3>
+                    
+                    <div class="info-item">
+                        <span class="info-label">Full Name</span>
+                        <span class="info-value">{{ student.name }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Student ID</span>
+                        <span class="info-value"><span class="badge bg-secondary px-2.5 py-1.5 text-uppercase" style="font-size: 0.75rem;">{{ student.student_id }}</span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email Address</span>
+                        <span class="info-value">{{ student.email }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Account Password</span>
+                        <span class="info-value"><code style="font-size:0.85rem; color:#0f172a; font-family: monospace;">{{ student.password }}</code></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Status Card -->
+            <div class="col-md-7 col-lg-8">
+                <div class="glass-card">
+                    <div class="card-header-icon">
+                        <i class="bi bi-journal-check"></i>
+                    </div>
+                    <h3 class="card-title-custom">Mathematics Exam Results</h3>
+
+                    {% if has_taken %}
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 text-center text-sm-start border-sm-end mb-4 mb-sm-0">
+                                <div class="info-label mb-2">FINAL EXAM SCORE</div>
+                                <div class="score-large {% if not passed %}failed{% endif %}">
+                                    {{ total_score|floatformat:"-2" }}<span>/10</span>
+                                </div>
+                                <div class="mt-3">
+                                    {% if passed %}
+                                        <span class="status-badge passed">
+                                            <i class="bi bi-patch-check-fill"></i> Passed
+                                        </span>
+                                    {% else %}
+                                        <span class="status-badge failed">
+                                            <i class="bi bi-x-octagon-fill"></i> Failed
+                                        </span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-sm-6 ps-sm-4">
+                                <div class="info-item">
+                                    <span class="info-label">Grade Percentage</span>
+                                    <span class="info-value">{{ percentage }}%</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Correct Answers</span>
+                                    <span class="info-value text-success"><i class="bi bi-check-circle-fill me-1"></i> {{ correct_count }}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Wrong Answers</span>
+                                    <span class="info-value text-danger"><i class="bi bi-x-circle-fill me-1"></i> {{ wrong_count }}</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Status Threshold</span>
+                                    <span class="info-value">50% (5.0 Points)</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="py-4 text-center">
+                            <div class="status-badge pending mb-3">
+                                <i class="bi bi-hourglass-split"></i> Exam Not Taken Yet
+                            </div>
+                            <p class="text-muted mb-4 fs-6">You have not completed the required Mathematics Exam yet. Once you complete the test, your final score and detailed results breakdown will show up here.</p>
+                            <a href="{% url 'quiz_page' %}" class="btn-start-quiz">
+                                <i class="bi bi-play-fill" style="font-size:1.2rem;"></i> Start Mathematics Exam Now
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- BREAKDOWN SECTION (only visible if exam has been taken) -->
+        {% if has_taken %}
+            <div class="breakdown-section">
+                <h2 class="breakdown-title">📝 Detailed Exam Question & Options Review</h2>
+                <p class="text-secondary mb-4" style="font-size:0.875rem;">Click on any question card below to expand and view the full question, the four multiple-choice options, the correct answer, and your final result.</p>
+
+                <div class="accordion" id="questionsAccordion">
+                    {% for q in question_data %}
+                        <div class="question-card {% if q.is_correct %}correct{% else %}wrong{% endif %}">
+                            
+                            <!-- Question Header Trigger -->
+                            <div class="question-header collapsed" 
+                                 data-bs-toggle="collapse" 
+                                 data-bs-target="#collapseQ{{ q.question_no }}" 
+                                 aria-expanded="false" 
+                                 aria-controls="collapseQ{{ q.question_no }}">
+                                
+                                <div class="q-title-info">
+                                    <div class="q-number-badge">
+                                        {{ q.question_no }}
+                                    </div>
+                                    <div class="eq-display">
+                                        Question {{ q.question_no }}: &nbsp;{{ q.a }} {{ q.op_symbol }} {{ q.b }} &nbsp;=&nbsp; ?
+                                    </div>
+                                </div>
+
+                                <div class="q-badges">
+                                    <span class="badge bg-light text-secondary border px-2.5 py-1.5 text-nowrap" style="font-size: 0.8rem; font-weight: 500;">
+                                        Your Ans: <strong class="{% if q.is_correct %}text-success{% else %}text-danger{% endif %}">{{ q.user_answer }}</strong>
+                                    </span>
+                                    <span class="badge bg-light text-secondary border px-2.5 py-1.5 text-nowrap" style="font-size: 0.8rem; font-weight: 500;">
+                                        Correct: <strong class="text-success">{{ q.correct_answer }}</strong>
+                                    </span>
+                                    {% if q.is_correct %}
+                                        <span class="badge-marks correct">
+                                            <i class="bi bi-check2-circle"></i> Correct (+{{ q.marks_scored|floatformat:"-2" }} pts)
+                                        </span>
+                                    {% else %}
+                                        <span class="badge-marks wrong">
+                                            <i class="bi bi-x-circle"></i> Wrong (0 pts)
+                                        </span>
+                                    {% endif %}
+                                    <button class="btn-view-options">
+                                        <i class="bi bi-eye"></i> View Options
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Collapse Area -->
+                            <div id="collapseQ{{ q.question_no }}" 
+                                 class="collapse" 
+                                 data-bs-parent="#questionsAccordion">
+                                <div class="q-collapse-content">
+                                    
+                                    <h6 class="fw-bold mb-3 text-secondary text-uppercase" style="font-size:0.75rem; letter-spacing:0.5px;">Multiple Choice Options</h6>
+                                    
+                                    <!-- 4 Option Choices Grid -->
+                                    <div class="options-grid">
+                                        {% for opt in q.options %}
+                                            <div class="option-item {% if opt.is_correct %}opt-correct{% elif opt.is_user_wrong %}opt-wrong-user{% endif %}">
+                                                <span>
+                                                    <span class="opt-lbl">{{ opt.label }}.</span>
+                                                    {{ opt.value }}
+                                                </span>
+                                                <span>
+                                                    {% if opt.is_correct %}
+                                                        <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1 rounded" style="font-size: 0.75rem;">
+                                                            <i class="bi bi-check-circle-fill me-1"></i> Correct Answer
+                                                        </span>
+                                                    {% elif opt.is_user_wrong %}
+                                                        <span class="badge bg-danger-subtle text-danger border border-danger-subtle px-2 py-1 rounded" style="font-size: 0.75rem;">
+                                                            <i class="bi bi-x-circle-fill me-1"></i> Your Selection
+                                                        </span>
+                                                    {% endif %}
+                                                </span>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+
+                                    <!-- Feedback summary text -->
+                                    <div class="feedback-box {% if q.is_correct %}correct{% else %}wrong{% endif %}">
+                                        <i class="bi {% if q.is_correct %}bi-check-circle-fill{% else %}bi-exclamation-triangle-fill{% endif %} fs-5"></i>
+                                        <div>
+                                            {% if q.is_correct %}
+                                                <strong>Awesome job!</strong> You answered <strong>{{ q.user_answer }}</strong> correctly on attempt #{{ q.attempts_used }}. You scored <strong>{{ q.marks_scored|floatformat:"-2" }}</strong> points on this question.
+                                            {% else %}
+                                                <strong>Incorrect answer.</strong> You answered <strong>{{ q.user_answer }}</strong>, but the correct answer is <strong>{{ q.correct_answer }}</strong>. You used all {{ q.attempts_used }} attempts without answering correctly, scoring <strong>0</strong> points.
+                                            {% endif %}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Auto-dismiss toasts after 5 seconds
+        document.addEventListener('DOMContentLoaded', function () {
+            const toastElList = document.querySelectorAll('.toast');
+            toastElList.forEach(toastEl => {
+                setTimeout(() => {
+                    const bsToast = bootstrap.Toast.getInstance(toastEl) || new bootstrap.Toast(toastEl);
+                    bsToast.hide();
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
