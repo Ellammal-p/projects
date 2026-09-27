@@ -1,0 +1,65 @@
+<footer class="bg-dark text-white pt-5 pb-4 mt-0">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-5 col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-primary text-white rounded-3 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%) !important;">
+                        <i class="bi bi-heart-pulse-fill fs-5"></i>
+                    </div>
+                    <h5 class="font-heading fw-bold mb-0 text-white fs-4">MindWell AI</h5>
+                </div>
+                <p class="text-secondary mb-3 small" style="line-height: 1.6;">
+                    An AI-based depression risk analysis & mental wellness support system combining PHQ-9 educational screening, longitudinal mood analytics, and NLTK NLP journal sentiment signals into a unified wellness space.
+                </p>
+                <div class="p-3 rounded-3 bg-secondary bg-opacity-10 border border-secondary border-opacity-25 text-light small">
+                    <i class="bi bi-shield-exclamation text-warning me-2 fs-6"></i>
+                    <strong>Important Notice:</strong> This system is designed for educational and mental-wellness support purposes only. It does not diagnose depression or any other medical condition and does not replace professional medical advice.
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <h6 class="font-heading fw-bold text-uppercase text-white mb-3 tracking-wider">MindWell AI Ecosystem</h6>
+                <ul class="list-unstyled text-secondary small">
+                    <li class="mb-2"><a href="{% url 'home' %}" class="text-secondary text-decoration-none hover-white"><i class="bi bi-chevron-right text-primary me-1"></i> Home</a></li>
+                    <li class="mb-2"><a href="{% url 'wellness_tips' %}" class="text-secondary text-decoration-none hover-white"><i class="bi bi-chevron-right text-primary me-1"></i> Wellness Resources</a></li>
+                    <li class="mb-2"><a href="{% url 'helplines' %}" class="text-secondary text-decoration-none hover-white"><i class="bi bi-chevron-right text-primary me-1"></i> Emergency Support</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="mb-2"><a href="{% url 'dashboard' %}" class="text-secondary text-decoration-none hover-white"><i class="bi bi-chevron-right text-primary me-1"></i> Wellness Dashboard</a></li>
+                    <li class="mb-2"><a href="{% url 'chatbot' %}" class="text-secondary text-decoration-none hover-white"><i class="bi bi-chevron-right text-primary me-1"></i> AI Assistant</a></li>
+                    {% else %}
+                    <li class="mb-2"><a href="{% url 'register' %}" class="text-secondary text-decoration-none hover-white"><i class="bi bi-chevron-right text-primary me-1"></i> Get Started</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <h6 class="font-heading fw-bold text-uppercase text-white mb-3 tracking-wider">Verified 24/7 Helplines</h6>
+                <div class="p-3 rounded-3 bg-danger bg-opacity-10 border border-danger border-opacity-25 mb-2">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-telephone-fill text-danger fs-5 me-3"></i>
+                        <div>
+                            <div class="fw-bold text-white small">Tele-MANAS National Helpline</div>
+                            <div class="text-danger fw-bold fs-6">14416 / 1800-891-4416</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3 rounded-3 bg-info bg-opacity-10 border border-info border-opacity-25">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-telephone text-info fs-5 me-3"></i>
+                        <div>
+                            <div class="fw-bold text-white small">KIRAN Mental Health Toll-Free</div>
+                            <div class="text-info fw-bold fs-6">1800-599-0019</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-secondary border-opacity-25 my-4">
+        
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center text-secondary small">
+            <p class="mb-2 mb-sm-0">&copy; 2026 MindWell AI Platform. AI-Based Mental Wellness Support System.</p>
+            <p class="mb-0">Built with Django, Scikit-Learn ML & NLTK NLP</p>
+        </div>
+    </div>
+</footer>

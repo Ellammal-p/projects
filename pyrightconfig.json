@@ -1,0 +1,11 @@
+{
+    "venvPath": ".",
+    "venv": ".venv",
+    "extraPaths": [
+        "."
+    ],
+    "reportMissingTypeStubs": false,
+    "reportAttributeAccessIssue": "none",
+    "reportInconsistentOverload": "none",
+    "reportIncompatibleVariableOverride": "none"
+}

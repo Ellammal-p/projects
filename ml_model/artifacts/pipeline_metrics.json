@@ -1,0 +1,234 @@
+{
+    "logistic_regression": {
+        "model_name": "Logistic Regression",
+        "accuracy": 0.9833,
+        "precision_weighted": 0.9839,
+        "recall_weighted": 0.9833,
+        "f1_weighted": 0.9814,
+        "f1_macro": 0.9239,
+        "confusion_matrix": [
+            [
+                3,
+                3,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                47,
+                1,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                80,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                69,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                37
+            ]
+        ]
+    },
+    "random_forest": {
+        "model_name": "Random Forest",
+        "accuracy": 0.8,
+        "precision_weighted": 0.8089,
+        "recall_weighted": 0.8,
+        "f1_weighted": 0.7939,
+        "f1_macro": 0.7027,
+        "confusion_matrix": [
+            [
+                1,
+                5,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                33,
+                15,
+                0,
+                0
+            ],
+            [
+                0,
+                4,
+                71,
+                5,
+                0
+            ],
+            [
+                0,
+                0,
+                9,
+                57,
+                3
+            ],
+            [
+                0,
+                0,
+                0,
+                7,
+                30
+            ]
+        ]
+    },
+    "mlp": {
+        "model_name": "Multi-Layer Perceptron (MLP)",
+        "accuracy": 0.9125,
+        "precision_weighted": 0.9219,
+        "recall_weighted": 0.9125,
+        "f1_weighted": 0.9107,
+        "f1_macro": 0.877,
+        "confusion_matrix": [
+            [
+                4,
+                2,
+                0,
+                0,
+                0
+            ],
+            [
+                1,
+                44,
+                3,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                80,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                7,
+                54,
+                8
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                37
+            ]
+        ]
+    },
+    "lstm": {
+        "model_name": "LSTM / GRU Mood Sequence Classifier",
+        "accuracy": 0.595,
+        "precision_weighted": 0.6024,
+        "recall_weighted": 0.595,
+        "f1_weighted": 0.5852,
+        "f1_macro": 0.5751,
+        "confusion_matrix": [
+            [
+                5,
+                7,
+                0,
+                0,
+                0
+            ],
+            [
+                2,
+                16,
+                21,
+                0,
+                0
+            ],
+            [
+                0,
+                12,
+                47,
+                8,
+                1
+            ],
+            [
+                0,
+                0,
+                9,
+                24,
+                18
+            ],
+            [
+                0,
+                0,
+                0,
+                3,
+                27
+            ]
+        ]
+    },
+    "bert": {
+        "model_name": "BERT / Transformer Journal NLP Classifier",
+        "accuracy": 1.0,
+        "precision_weighted": 1.0,
+        "recall_weighted": 1.0,
+        "f1_weighted": 1.0,
+        "f1_macro": 1.0,
+        "confusion_matrix": [
+            [
+                19,
+                0,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                42,
+                0,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                68,
+                0,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                40,
+                0
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                31
+            ]
+        ]
+    },
+    "risk_labels": {
+        "0": "Minimal Symptoms",
+        "1": "Mild Symptom Risk",
+        "2": "Moderate Symptom Risk",
+        "3": "Moderately Severe Risk",
+        "4": "Severe Symptom Risk"
+    }
+}

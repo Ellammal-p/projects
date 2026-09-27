@@ -1,0 +1,1001 @@
+entry_id,text,risk_class
+TEXT_0000,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0001,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Thinking about what to do next.,3
+TEXT_0002,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0003,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Hope tomorrow brings more clarity.",4
+TEXT_0004,Feeling great today! Spent quality time with friends and accomplished all my goals. Need to take better care of myself.,0
+TEXT_0005,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0006,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0007,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0008,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0009,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Hope tomorrow brings more clarity.",0
+TEXT_0010,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0011,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Just recording my thoughts for the day.,0
+TEXT_0012,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0013,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Thinking about what to do next.,4
+TEXT_0014,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0015,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0016,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0017,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0018,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0019,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Thinking about what to do next.",1
+TEXT_0020,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0021,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0022,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0023,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0024,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0025,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0026,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0027,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0028,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0029,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Thinking about what to do next.,3
+TEXT_0030,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0031,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0032,Great workout session this morning. I feel physically fit and mentally focused today. Hope tomorrow brings more clarity.,0
+TEXT_0033,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0034,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0035,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0036,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0037,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0038,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0039,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Hope tomorrow brings more clarity.",1
+TEXT_0040,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Hope tomorrow brings more clarity.",1
+TEXT_0041,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Thinking about what to do next.,3
+TEXT_0042,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0043,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0044,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0045,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0046,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Also reflected on my week.",1
+TEXT_0047,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0048,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0049,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0050,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Also reflected on my week.",1
+TEXT_0051,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0052,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0053,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0054,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Thinking about what to do next.",1
+TEXT_0055,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0056,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0057,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0058,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0059,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0060,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0061,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Hope tomorrow brings more clarity.",4
+TEXT_0062,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0063,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0064,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Also reflected on my week.,4
+TEXT_0065,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0066,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0067,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Also reflected on my week.",1
+TEXT_0068,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0069,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Just recording my thoughts for the day.",4
+TEXT_0070,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Also reflected on my week.,4
+TEXT_0071,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0072,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0073,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Need to take better care of myself.",0
+TEXT_0074,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0075,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Thinking about what to do next.,4
+TEXT_0076,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0077,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0078,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0079,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0080,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0081,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0082,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0083,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0084,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0085,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0086,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0087,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0088,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0089,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0090,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0091,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0092,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0093,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0094,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0095,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0096,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Thinking about what to do next.",1
+TEXT_0097,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0098,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Thinking about what to do next.,3
+TEXT_0099,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0100,Engulfed in severe dark depression. Incapable of managing day to day existence. Need to take better care of myself.,4
+TEXT_0101,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0102,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0103,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0104,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0105,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0106,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0107,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Need to take better care of myself.,0
+TEXT_0108,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0109,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0110,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0111,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0112,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0113,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0114,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0115,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0116,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0117,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Also reflected on my week.",1
+TEXT_0118,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0119,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0120,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0121,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0122,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0123,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Just recording my thoughts for the day.",0
+TEXT_0124,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0125,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0126,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0127,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0128,Feeling great today! Spent quality time with friends and accomplished all my goals. Thinking about what to do next.,0
+TEXT_0129,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Just recording my thoughts for the day.",4
+TEXT_0130,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0131,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Need to take better care of myself.,4
+TEXT_0132,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0133,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0134,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0135,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0136,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0137,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0138,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0139,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Thinking about what to do next.,3
+TEXT_0140,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0141,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0142,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0143,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0144,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0145,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0146,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0147,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0148,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0149,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0150,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0151,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0152,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Hope tomorrow brings more clarity.,0
+TEXT_0153,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Need to take better care of myself.",0
+TEXT_0154,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0155,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0156,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Just recording my thoughts for the day.,3
+TEXT_0157,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0158,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Thinking about what to do next.,4
+TEXT_0159,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0160,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0161,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0162,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0163,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0164,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0165,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0166,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0167,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0168,Great workout session this morning. I feel physically fit and mentally focused today. Need to take better care of myself.,0
+TEXT_0169,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0170,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Just recording my thoughts for the day.,4
+TEXT_0171,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Thinking about what to do next.",0
+TEXT_0172,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0173,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0174,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0175,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0176,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Just recording my thoughts for the day.",4
+TEXT_0177,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0178,Great workout session this morning. I feel physically fit and mentally focused today. Hope tomorrow brings more clarity.,0
+TEXT_0179,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Hope tomorrow brings more clarity.",4
+TEXT_0180,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Thinking about what to do next.,3
+TEXT_0181,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0182,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0183,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0184,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0185,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Thinking about what to do next.",1
+TEXT_0186,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Need to take better care of myself.",1
+TEXT_0187,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0188,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0189,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0190,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Just recording my thoughts for the day.,3
+TEXT_0191,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0192,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0193,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0194,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0195,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0196,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0197,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0198,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0199,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Also reflected on my week.",0
+TEXT_0200,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0201,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0202,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0203,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0204,Engulfed in severe dark depression. Incapable of managing day to day existence. Need to take better care of myself.,4
+TEXT_0205,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0206,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0207,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0208,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0209,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0210,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0211,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0212,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0213,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0214,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0215,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0216,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0217,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0218,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0219,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Just recording my thoughts for the day.,3
+TEXT_0220,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0221,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0222,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Also reflected on my week.",1
+TEXT_0223,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0224,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0225,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Just recording my thoughts for the day.,4
+TEXT_0226,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0227,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0228,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0229,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Just recording my thoughts for the day.,0
+TEXT_0230,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0231,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0232,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0233,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0234,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Also reflected on my week.",0
+TEXT_0235,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Just recording my thoughts for the day.,0
+TEXT_0236,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0237,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0238,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Hope tomorrow brings more clarity.,0
+TEXT_0239,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0240,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0241,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0242,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0243,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Need to take better care of myself.",1
+TEXT_0244,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0245,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0246,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0247,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0248,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0249,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0250,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0251,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0252,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0253,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Hope tomorrow brings more clarity.",4
+TEXT_0254,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0255,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0256,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0257,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0258,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0259,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Just recording my thoughts for the day.",1
+TEXT_0260,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Hope tomorrow brings more clarity.",1
+TEXT_0261,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0262,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0263,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0264,Engulfed in severe dark depression. Incapable of managing day to day existence. Hope tomorrow brings more clarity.,4
+TEXT_0265,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0266,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0267,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Need to take better care of myself.",1
+TEXT_0268,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0269,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0270,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0271,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Thinking about what to do next.,3
+TEXT_0272,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Also reflected on my week.",1
+TEXT_0273,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0274,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Just recording my thoughts for the day.",4
+TEXT_0275,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0276,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0277,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0278,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0279,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Thinking about what to do next.",4
+TEXT_0280,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0281,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0282,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0283,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0284,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0285,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0286,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0287,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0288,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Also reflected on my week.,3
+TEXT_0289,Feeling great today! Spent quality time with friends and accomplished all my goals. Thinking about what to do next.,0
+TEXT_0290,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0291,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0292,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0293,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0294,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0295,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0296,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0297,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0298,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0299,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0300,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0301,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0302,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Thinking about what to do next.,3
+TEXT_0303,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0304,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0305,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Just recording my thoughts for the day.",4
+TEXT_0306,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0307,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0308,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0309,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0310,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0311,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0312,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0313,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0314,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0315,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0316,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0317,Great workout session this morning. I feel physically fit and mentally focused today. Also reflected on my week.,0
+TEXT_0318,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0319,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Just recording my thoughts for the day.",1
+TEXT_0320,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0321,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0322,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0323,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Thinking about what to do next.,0
+TEXT_0324,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0325,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0326,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0327,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Hope tomorrow brings more clarity.",1
+TEXT_0328,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0329,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0330,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Thinking about what to do next.",0
+TEXT_0331,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0332,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0333,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0334,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0335,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0336,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0337,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0338,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Just recording my thoughts for the day.,0
+TEXT_0339,Great workout session this morning. I feel physically fit and mentally focused today. Hope tomorrow brings more clarity.,0
+TEXT_0340,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0341,Engulfed in severe dark depression. Incapable of managing day to day existence. Need to take better care of myself.,4
+TEXT_0342,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0343,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0344,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0345,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Need to take better care of myself.,4
+TEXT_0346,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0347,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Also reflected on my week.,4
+TEXT_0348,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0349,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0350,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0351,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0352,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0353,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Thinking about what to do next.,3
+TEXT_0354,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0355,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0356,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0357,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0358,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0359,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0360,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0361,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0362,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Hope tomorrow brings more clarity.",4
+TEXT_0363,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Thinking about what to do next.,0
+TEXT_0364,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Hope tomorrow brings more clarity.,0
+TEXT_0365,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0366,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0367,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0368,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Hope tomorrow brings more clarity.",1
+TEXT_0369,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0370,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0371,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0372,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0373,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0374,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0375,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0376,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0377,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0378,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0379,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0380,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0381,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0382,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Hope tomorrow brings more clarity.",4
+TEXT_0383,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0384,Feeling great today! Spent quality time with friends and accomplished all my goals. Also reflected on my week.,0
+TEXT_0385,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0386,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0387,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0388,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0389,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0390,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0391,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0392,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Thinking about what to do next.,4
+TEXT_0393,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0394,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0395,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0396,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0397,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Just recording my thoughts for the day.,4
+TEXT_0398,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0399,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Just recording my thoughts for the day.",4
+TEXT_0400,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Just recording my thoughts for the day.,3
+TEXT_0401,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0402,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0403,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0404,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0405,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0406,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0407,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0408,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0409,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0410,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0411,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0412,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Just recording my thoughts for the day.",1
+TEXT_0413,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0414,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0415,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Also reflected on my week.",1
+TEXT_0416,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0417,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0418,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Also reflected on my week.,4
+TEXT_0419,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0420,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0421,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Just recording my thoughts for the day.,3
+TEXT_0422,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0423,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0424,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0425,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0426,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0427,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0428,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0429,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0430,Feeling great today! Spent quality time with friends and accomplished all my goals. Just recording my thoughts for the day.,0
+TEXT_0431,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0432,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Thinking about what to do next.,0
+TEXT_0433,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0434,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0435,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Hope tomorrow brings more clarity.",4
+TEXT_0436,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0437,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0438,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0439,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0440,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0441,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Thinking about what to do next.,4
+TEXT_0442,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0443,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0444,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0445,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0446,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0447,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0448,Great workout session this morning. I feel physically fit and mentally focused today. Hope tomorrow brings more clarity.,0
+TEXT_0449,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0450,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0451,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0452,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0453,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0454,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Thinking about what to do next.,3
+TEXT_0455,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0456,Engulfed in severe dark depression. Incapable of managing day to day existence. Need to take better care of myself.,4
+TEXT_0457,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0458,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0459,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0460,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Thinking about what to do next.,3
+TEXT_0461,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0462,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0463,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0464,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Need to take better care of myself.",1
+TEXT_0465,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0466,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0467,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0468,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Also reflected on my week.,4
+TEXT_0469,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0470,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0471,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0472,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0473,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0474,Engulfed in severe dark depression. Incapable of managing day to day existence. Hope tomorrow brings more clarity.,4
+TEXT_0475,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0476,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Just recording my thoughts for the day.,3
+TEXT_0477,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0478,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0479,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0480,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0481,Great workout session this morning. I feel physically fit and mentally focused today. Just recording my thoughts for the day.,0
+TEXT_0482,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0483,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0484,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0485,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0486,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0487,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0488,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0489,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0490,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0491,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Just recording my thoughts for the day.",4
+TEXT_0492,Feeling great today! Spent quality time with friends and accomplished all my goals. Thinking about what to do next.,0
+TEXT_0493,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Thinking about what to do next.,3
+TEXT_0494,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Also reflected on my week.",0
+TEXT_0495,Engulfed in severe dark depression. Incapable of managing day to day existence. Hope tomorrow brings more clarity.,4
+TEXT_0496,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0497,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Thinking about what to do next.,0
+TEXT_0498,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0499,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0500,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0501,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Also reflected on my week.,3
+TEXT_0502,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0503,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Just recording my thoughts for the day.",0
+TEXT_0504,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0505,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0506,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Hope tomorrow brings more clarity.",1
+TEXT_0507,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0508,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0509,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0510,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0511,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0512,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0513,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0514,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Thinking about what to do next.,3
+TEXT_0515,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0516,Feeling great today! Spent quality time with friends and accomplished all my goals. Need to take better care of myself.,0
+TEXT_0517,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0518,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0519,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0520,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0521,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0522,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0523,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0524,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0525,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Just recording my thoughts for the day.",1
+TEXT_0526,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0527,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0528,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0529,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0530,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Just recording my thoughts for the day.,3
+TEXT_0531,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0532,Feeling great today! Spent quality time with friends and accomplished all my goals. Just recording my thoughts for the day.,0
+TEXT_0533,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0534,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0535,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0536,Great workout session this morning. I feel physically fit and mentally focused today. Just recording my thoughts for the day.,0
+TEXT_0537,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0538,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0539,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0540,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Just recording my thoughts for the day.",4
+TEXT_0541,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0542,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0543,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0544,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0545,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0546,Feeling great today! Spent quality time with friends and accomplished all my goals. Also reflected on my week.,0
+TEXT_0547,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0548,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0549,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0550,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0551,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0552,Great workout session this morning. I feel physically fit and mentally focused today. Just recording my thoughts for the day.,0
+TEXT_0553,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Also reflected on my week.,4
+TEXT_0554,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0555,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Thinking about what to do next.,3
+TEXT_0556,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0557,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0558,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0559,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Thinking about what to do next.,3
+TEXT_0560,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0561,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0562,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0563,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Hope tomorrow brings more clarity.,0
+TEXT_0564,Engulfed in severe dark depression. Incapable of managing day to day existence. Need to take better care of myself.,4
+TEXT_0565,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Thinking about what to do next.,3
+TEXT_0566,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Just recording my thoughts for the day.,4
+TEXT_0567,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0568,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0569,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0570,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0571,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0572,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0573,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0574,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0575,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0576,Feeling great today! Spent quality time with friends and accomplished all my goals. Also reflected on my week.,0
+TEXT_0577,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0578,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Hope tomorrow brings more clarity.",1
+TEXT_0579,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0580,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0581,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0582,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Hope tomorrow brings more clarity.",4
+TEXT_0583,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0584,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0585,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Just recording my thoughts for the day.",1
+TEXT_0586,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0587,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0588,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0589,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0590,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0591,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0592,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0593,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0594,Feeling great today! Spent quality time with friends and accomplished all my goals. Hope tomorrow brings more clarity.,0
+TEXT_0595,Great workout session this morning. I feel physically fit and mentally focused today. Need to take better care of myself.,0
+TEXT_0596,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0597,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0598,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Thinking about what to do next.",4
+TEXT_0599,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0600,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0601,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Thinking about what to do next.,3
+TEXT_0602,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0603,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0604,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0605,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0606,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0607,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0608,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Thinking about what to do next.,0
+TEXT_0609,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0610,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0611,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0612,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0613,Great workout session this morning. I feel physically fit and mentally focused today. Also reflected on my week.,0
+TEXT_0614,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0615,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0616,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0617,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0618,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0619,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0620,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0621,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0622,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0623,Great workout session this morning. I feel physically fit and mentally focused today. Just recording my thoughts for the day.,0
+TEXT_0624,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0625,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Need to take better care of myself.,0
+TEXT_0626,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0627,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0628,Engulfed in severe dark depression. Incapable of managing day to day existence. Need to take better care of myself.,4
+TEXT_0629,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0630,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0631,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0632,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0633,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0634,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0635,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0636,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0637,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0638,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0639,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0640,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0641,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0642,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0643,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0644,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0645,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0646,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Thinking about what to do next.,4
+TEXT_0647,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0648,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0649,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0650,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0651,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0652,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Need to take better care of myself.,0
+TEXT_0653,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Need to take better care of myself.",0
+TEXT_0654,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0655,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Hope tomorrow brings more clarity.",1
+TEXT_0656,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0657,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0658,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0659,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0660,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0661,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0662,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0663,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0664,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Need to take better care of myself.",1
+TEXT_0665,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Need to take better care of myself.",1
+TEXT_0666,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0667,Engulfed in severe dark depression. Incapable of managing day to day existence. Hope tomorrow brings more clarity.,4
+TEXT_0668,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0669,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0670,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0671,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0672,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0673,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0674,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0675,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0676,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0677,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0678,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Need to take better care of myself.",1
+TEXT_0679,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0680,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0681,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0682,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0683,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0684,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0685,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0686,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0687,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0688,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0689,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0690,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0691,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0692,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Also reflected on my week.,3
+TEXT_0693,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0694,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0695,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0696,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Thinking about what to do next.",1
+TEXT_0697,Feeling great today! Spent quality time with friends and accomplished all my goals. Need to take better care of myself.,0
+TEXT_0698,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0699,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0700,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0701,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0702,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0703,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0704,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0705,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0706,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0707,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0708,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Need to take better care of myself.",1
+TEXT_0709,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Also reflected on my week.",1
+TEXT_0710,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0711,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0712,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Just recording my thoughts for the day.,4
+TEXT_0713,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0714,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0715,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0716,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Just recording my thoughts for the day.",1
+TEXT_0717,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0718,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0719,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0720,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0721,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0722,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Thinking about what to do next.,3
+TEXT_0723,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Need to take better care of myself.,0
+TEXT_0724,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0725,Feeling great today! Spent quality time with friends and accomplished all my goals. Thinking about what to do next.,0
+TEXT_0726,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0727,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0728,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0729,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0730,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0731,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Thinking about what to do next.,0
+TEXT_0732,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0733,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0734,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0735,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0736,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0737,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Need to take better care of myself.",0
+TEXT_0738,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0739,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0740,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0741,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0742,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0743,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0744,Great workout session this morning. I feel physically fit and mentally focused today. Need to take better care of myself.,0
+TEXT_0745,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0746,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0747,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Also reflected on my week.",1
+TEXT_0748,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Also reflected on my week.",0
+TEXT_0749,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0750,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Also reflected on my week.,3
+TEXT_0751,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0752,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Need to take better care of myself.,3
+TEXT_0753,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0754,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0755,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0756,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Just recording my thoughts for the day.,0
+TEXT_0757,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0758,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0759,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0760,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0761,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0762,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0763,Feeling great today! Spent quality time with friends and accomplished all my goals. Hope tomorrow brings more clarity.,0
+TEXT_0764,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0765,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0766,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0767,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0768,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Hope tomorrow brings more clarity.",1
+TEXT_0769,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Thinking about what to do next.",1
+TEXT_0770,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0771,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0772,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0773,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0774,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0775,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0776,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0777,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Just recording my thoughts for the day.,4
+TEXT_0778,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Just recording my thoughts for the day.,3
+TEXT_0779,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0780,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0781,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0782,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0783,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0784,Engulfed in severe dark depression. Incapable of managing day to day existence. Thinking about what to do next.,4
+TEXT_0785,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0786,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0787,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Also reflected on my week.",2
+TEXT_0788,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0789,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Thinking about what to do next.,3
+TEXT_0790,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Just recording my thoughts for the day.,0
+TEXT_0791,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0792,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0793,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0794,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0795,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0796,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Just recording my thoughts for the day.,4
+TEXT_0797,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0798,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0799,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Need to take better care of myself.,0
+TEXT_0800,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0801,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0802,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0803,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0804,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0805,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Just recording my thoughts for the day.,3
+TEXT_0806,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0807,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Need to take better care of myself.",1
+TEXT_0808,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0809,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Hope tomorrow brings more clarity.,4
+TEXT_0810,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0811,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0812,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0813,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Also reflected on my week.,3
+TEXT_0814,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0815,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0816,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0817,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0818,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0819,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Thinking about what to do next.,3
+TEXT_0820,Great workout session this morning. I feel physically fit and mentally focused today. Hope tomorrow brings more clarity.,0
+TEXT_0821,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0822,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Hope tomorrow brings more clarity.,3
+TEXT_0823,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0824,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Need to take better care of myself.",4
+TEXT_0825,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0826,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Just recording my thoughts for the day.,4
+TEXT_0827,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Also reflected on my week.",1
+TEXT_0828,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0829,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0830,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0831,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0832,Great workout session this morning. I feel physically fit and mentally focused today. Thinking about what to do next.,0
+TEXT_0833,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0834,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0835,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0836,Great workout session this morning. I feel physically fit and mentally focused today. Just recording my thoughts for the day.,0
+TEXT_0837,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0838,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0839,Feeling great today! Spent quality time with friends and accomplished all my goals. Hope tomorrow brings more clarity.,0
+TEXT_0840,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0841,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0842,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0843,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0844,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Need to take better care of myself.,4
+TEXT_0845,Feeling great today! Spent quality time with friends and accomplished all my goals. Also reflected on my week.,0
+TEXT_0846,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0847,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0848,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Hope tomorrow brings more clarity.,0
+TEXT_0849,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0850,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0851,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0852,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Also reflected on my week.",0
+TEXT_0853,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0854,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0855,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Thinking about what to do next.",0
+TEXT_0856,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0857,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0858,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0859,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0860,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0861,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0862,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0863,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Just recording my thoughts for the day.,0
+TEXT_0864,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0865,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0866,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0867,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0868,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Need to take better care of myself.,3
+TEXT_0869,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Just recording my thoughts for the day.",1
+TEXT_0870,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0871,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Also reflected on my week.",1
+TEXT_0872,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0873,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Thinking about what to do next.,2
+TEXT_0874,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Need to take better care of myself.,4
+TEXT_0875,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Just recording my thoughts for the day.,2
+TEXT_0876,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0877,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Also reflected on my week.,2
+TEXT_0878,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0879,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0880,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Just recording my thoughts for the day.",1
+TEXT_0881,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0882,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0883,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0884,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0885,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Just recording my thoughts for the day.",4
+TEXT_0886,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0887,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0888,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0889,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0890,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0891,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Thinking about what to do next.,3
+TEXT_0892,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Hope tomorrow brings more clarity.,3
+TEXT_0893,Great workout session this morning. I feel physically fit and mentally focused today. Also reflected on my week.,0
+TEXT_0894,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0895,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Need to take better care of myself.",1
+TEXT_0896,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0897,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Also reflected on my week.,2
+TEXT_0898,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Also reflected on my week.,2
+TEXT_0899,Engulfed in severe dark depression. Incapable of managing day to day existence. Also reflected on my week.,4
+TEXT_0900,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0901,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0902,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0903,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0904,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Thinking about what to do next.,4
+TEXT_0905,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Hope tomorrow brings more clarity.",0
+TEXT_0906,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0907,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Also reflected on my week.",4
+TEXT_0908,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Need to take better care of myself.,3
+TEXT_0909,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Thinking about what to do next.,2
+TEXT_0910,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0911,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0912,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0913,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Hope tomorrow brings more clarity.",4
+TEXT_0914,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0915,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0916,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0917,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0918,"Complete emotional numbness and severe despair. I feel completely empty, broken, and helpless. Need to take better care of myself.",4
+TEXT_0919,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0920,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0921,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Hope tomorrow brings more clarity.,2
+TEXT_0922,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Thinking about what to do next.,2
+TEXT_0923,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Also reflected on my week.,3
+TEXT_0924,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0925,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0926,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0927,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Hope tomorrow brings more clarity.,0
+TEXT_0928,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Hope tomorrow brings more clarity.",1
+TEXT_0929,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Thinking about what to do next.",1
+TEXT_0930,Engulfed in severe dark depression. Incapable of managing day to day existence. Just recording my thoughts for the day.,4
+TEXT_0931,Engulfed in severe dark depression. Incapable of managing day to day existence. Hope tomorrow brings more clarity.,4
+TEXT_0932,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Thinking about what to do next.",4
+TEXT_0933,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Just recording my thoughts for the day.,3
+TEXT_0934,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Also reflected on my week.",1
+TEXT_0935,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0936,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Just recording my thoughts for the day.",1
+TEXT_0937,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0938,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Thinking about what to do next.,3
+TEXT_0939,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Hope tomorrow brings more clarity.,3
+TEXT_0940,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0941,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Need to take better care of myself.",1
+TEXT_0942,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Just recording my thoughts for the day.,2
+TEXT_0943,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Hope tomorrow brings more clarity.",2
+TEXT_0944,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Also reflected on my week.",1
+TEXT_0945,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0946,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Just recording my thoughts for the day.,3
+TEXT_0947,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Just recording my thoughts for the day.,3
+TEXT_0948,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Hope tomorrow brings more clarity.,2
+TEXT_0949,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Just recording my thoughts for the day.",1
+TEXT_0950,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0951,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Need to take better care of myself.,0
+TEXT_0952,"Enjoyed reading a new book and relaxing outdoors. Feeling calm, peaceful, and satisfied. Also reflected on my week.",0
+TEXT_0953,"Severe exhaustion, hopelessness, and breakdown. I feel completely defeated by life right now. Also reflected on my week.",4
+TEXT_0954,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0955,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Need to take better care of myself.",2
+TEXT_0956,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1
+TEXT_0957,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Hope tomorrow brings more clarity.,2
+TEXT_0958,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Just recording my thoughts for the day.,2
+TEXT_0959,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Need to take better care of myself.,4
+TEXT_0960,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Just recording my thoughts for the day.,3
+TEXT_0961,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Need to take better care of myself.,2
+TEXT_0962,Had a productive day at work. Went for a refreshing run and cooked a healthy dinner. Also reflected on my week.,0
+TEXT_0963,"Tired after a long study session. Need to organize my sleep schedule better, but feeling okay. Hope tomorrow brings more clarity.",1
+TEXT_0964,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0965,Everything feels unbearable and dark. Unable to function or step outside. Deep unbearable pain. Just recording my thoughts for the day.,4
+TEXT_0966,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Thinking about what to do next.,0
+TEXT_0967,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0968,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Also reflected on my week.,3
+TEXT_0969,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Hope tomorrow brings more clarity.,3
+TEXT_0970,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Also reflected on my week.",1
+TEXT_0971,Woke up energized and optimistic about the upcoming project. Life feels balanced and bright. Also reflected on my week.,0
+TEXT_0972,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Also reflected on my week.,2
+TEXT_0973,Great workout session this morning. I feel physically fit and mentally focused today. Just recording my thoughts for the day.,0
+TEXT_0974,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0975,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Also reflected on my week.,3
+TEXT_0976,Heavy feeling in my chest all day. I can barely summon energy to complete basic daily routines. Hope tomorrow brings more clarity.,3
+TEXT_0977,Woke up feeling down for no clear reason. Cancelled plans with friends to stay home. Need to take better care of myself.,2
+TEXT_0978,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Just recording my thoughts for the day.",2
+TEXT_0979,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Thinking about what to do next.,4
+TEXT_0980,Feeling great today! Spent quality time with friends and accomplished all my goals. Thinking about what to do next.,0
+TEXT_0981,"An ordinary day with minor hiccups. A little overwhelmed by chores, but managing fine. Thinking about what to do next.",1
+TEXT_0982,Great workout session this morning. I feel physically fit and mentally focused today. Need to take better care of myself.,0
+TEXT_0983,I feel completely trapped in overwhelming sadness with no relief in sight. Constant crying spells. Hope tomorrow brings more clarity.,4
+TEXT_0984,Great workout session this morning. I feel physically fit and mentally focused today. Also reflected on my week.,0
+TEXT_0985,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Just recording my thoughts for the day.,2
+TEXT_0986,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Hope tomorrow brings more clarity.,2
+TEXT_0987,Feeling quite overwhelmed and anxious about everything piling up. Finding it hard to concentrate. Thinking about what to do next.,2
+TEXT_0988,Mind keeps racing with negative thoughts. Constant fatigue despite sleeping 8 hours. Need to take better care of myself.,2
+TEXT_0989,Extremely difficult to focus or get out of bed. Constant feeling of hopelessness and emotional burden. Need to take better care of myself.,3
+TEXT_0990,"Work was somewhat hectic, but I managed to finish my priority tasks. Mild fatigue. Need to take better care of myself.",1
+TEXT_0991,"Felt slightly stressed during the morning meeting, but relaxed after drinking coffee and taking a walk. Need to take better care of myself.",1
+TEXT_0992,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0993,Avoiding everyone's calls. I feel like a failure and dread facing tomorrow. Also reflected on my week.,3
+TEXT_0994,Spent most of the day in bed feeling deeply exhausted and sad. Nothing seems to bring joy anymore. Also reflected on my week.,3
+TEXT_0995,"Struggling to stay motivated today. Everything feels like an uphill effort, even simple tasks. Thinking about what to do next.",2
+TEXT_0996,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Thinking about what to do next.",1
+TEXT_0997,Feeling disconnected from people around me. Hard to muster enthusiasm for my hobbies. Need to take better care of myself.,2
+TEXT_0998,Internal overwhelming sorrow and persistent fatigue. Hard to see any positive way forward. Need to take better care of myself.,3
+TEXT_0999,"A bit busy today with deadlines, but handled it okay. Looking forward to resting tonight. Hope tomorrow brings more clarity.",1

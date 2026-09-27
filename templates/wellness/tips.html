@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Mental Wellness Tips - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="text-center mb-5">
+        <span class="badge bg-info-subtle text-info px-3 py-2 rounded-pill font-monospace mb-2">EDUCATIONAL
+            SELF-CARE</span>
+        <h2 class="fw-bold">Evidence-Informed Mental Wellness Tips</h2>
+        <p class="text-muted max-w-xl mx-auto">Practical daily habits to support emotional balance, resilience, and
+            general wellbeing.</p>
+    </div>
+
+    <!-- Wellness Disclaimer -->
+    <div class="disclaimer-banner mb-4">
+        <i class="bi bi-shield-check me-2"></i>
+        <strong>Educational Guidance:</strong> These tips represent general lifestyle habits and self-care routines.
+        They do NOT replace professional therapy or medical treatment.
+    </div>
+
+    <div class="row g-4">
+        {% for tip in tips %}
+        <div class="col-md-6">
+            <div class="card-custom p-4 h-100">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-info-subtle text-info p-3 rounded-circle me-3 fs-3">
+                        <i class="bi {{ tip.icon_class }}"></i>
+                    </div>
+                    <div>
+                        <span class="badge bg-secondary text-uppercase small">{{ tip.get_category_display }}</span>
+                        <h5 class="fw-bold mb-0 text-dark mt-1">{{ tip.title }}</h5>
+                    </div>
+                </div>
+                <p class="text-secondary mb-0" style="line-height: 1.6;">{{ tip.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

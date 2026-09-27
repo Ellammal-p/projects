@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pet Therapy & Mood Booster Hub - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Header Hero Banner -->
+    <div class="glass-card p-4 p-md-5 mb-4 border-0 shadow-lg text-center position-relative overflow-hidden">
+        <div class="d-inline-flex align-items-center justify-content-center bg-warning text-dark rounded-circle mb-3 shadow" style="width: 72px; height: 72px; background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%) !important;">
+            <span class="fs-1">🐾</span>
+        </div>
+        <h1 class="font-heading fw-bold mb-2">Pet Therapy & Mood Booster Hub</h1>
+        <p class="text-muted lead max-w-700 mx-auto mb-3">
+            Boost your emotional state with interactive virtual pet companions, comforting purr therapy, and live relaxing soundscapes!
+        </p>
+
+        <!-- Quick Mood Booster Filter Chips -->
+        <div class="d-flex justify-content-center gap-2 flex-wrap mt-4">
+            <button class="btn btn-outline-warning rounded-pill px-4 fw-bold active" onclick="filterPets('all')">🐾 All Companions</button>
+            <button class="btn btn-outline-primary rounded-pill px-4 fw-bold" onclick="filterPets('dog')">🐶 Joy & Loyalty</button>
+            <button class="btn btn-outline-success rounded-pill px-4 fw-bold" onclick="filterPets('cat')">🐱 Calm & Purr</button>
+            <button class="btn btn-outline-danger rounded-pill px-4 fw-bold" onclick="filterPets('panda')">🐼 Soft Relaxation</button>
+        </div>
+    </div>
+
+    <!-- Ambient Soundscape Player Section -->
+    <div class="glass-card p-4 mb-4 border-0 shadow-md">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="font-heading fw-bold mb-0">
+                <i class="bi bi-headphones text-primary me-2"></i>Live Web Audio Soundscapes
+            </h4>
+            <button class="btn btn-sm btn-outline-danger rounded-pill fw-bold" onclick="stopSoundscape()">
+                <i class="bi bi-stop-circle me-1"></i> Stop Soundscape
+            </button>
+        </div>
+        <p class="text-muted small mb-3">Synthesized live in your browser for instant stress reduction.</p>
+
+        <div class="row g-3">
+            <!-- Sound 1: Cat Purr -->
+            <div class="col-6 col-md-3">
+                <div id="sound_cat_purr" class="sound-btn text-center" onclick="toggleSoundscape('cat_purr')">
+                    <div class="fs-2 mb-1">🐱</div>
+                    <div class="fw-bold font-heading">Cat Purring</div>
+                    <div class="small text-muted">90Hz Healing Vibrations</div>
+                </div>
+            </div>
+
+            <!-- Sound 2: Ocean Waves -->
+            <div class="col-6 col-md-3">
+                <div id="sound_ocean" class="sound-btn text-center" onclick="toggleSoundscape('ocean')">
+                    <div class="fs-2 mb-1">🌊</div>
+                    <div class="fw-bold font-heading">Ocean Waves</div>
+                    <div class="small text-muted">Pink Noise Swells</div>
+                </div>
+            </div>
+
+            <!-- Sound 3: Soft Rain -->
+            <div class="col-6 col-md-3">
+                <div id="sound_rain" class="sound-btn text-center" onclick="toggleSoundscape('rain')">
+                    <div class="fs-2 mb-1">🌧️</div>
+                    <div class="fw-bold font-heading">Soft Rainfall</div>
+                    <div class="small text-muted">Cozy Pitter-Patter</div>
+                </div>
+            </div>
+
+            <!-- Sound 4: 528Hz Chimes -->
+            <div class="col-6 col-md-3">
+                <div id="sound_chimes" class="sound-btn text-center" onclick="toggleSoundscape('chimes')">
+                    <div class="fs-2 mb-1">✨</div>
+                    <div class="fw-bold font-heading">528Hz Chimes</div>
+                    <div class="small text-muted">Solfeggio Frequency</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Virtual Pet Companions Grid -->
+    <div class="row g-4" id="petGrid">
+        <!-- Pet 1: Barnaby the Golden Retriever -->
+        <div class="col-md-6 col-lg-3 pet-item" data-category="dog">
+            <div class="pet-card text-center p-3">
+                <div class="pet-avatar-box rounded-3 mb-3" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+                    <span>🐕</span>
+                </div>
+                <h5 class="font-heading fw-bold mb-1">Barnaby</h5>
+                <span class="badge bg-warning text-dark rounded-pill mb-2">Golden Retriever</span>
+                <p class="text-muted small mb-3" id="quote_barnaby">"You're doing great today! I believe in you!"</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-primary-custom rounded-pill" onclick="interactPet('barnaby', 'Bark! 🐾 Barnaby wags his tail happily and nudges your hand!')">
+                        <i class="bi bi-heart-fill me-1 text-danger"></i> Pet Barnaby
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pet 2: Luna the Calming Cat -->
+        <div class="col-md-6 col-lg-3 pet-item" data-category="cat">
+            <div class="pet-card text-center p-3">
+                <div class="pet-avatar-box rounded-3 mb-3" style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);">
+                    <span>🐈‍⬛</span>
+                </div>
+                <h5 class="font-heading fw-bold mb-1">Luna</h5>
+                <span class="badge bg-indigo text-white rounded-pill mb-2" style="background-color: #6366f1;">Calm Companion</span>
+                <p class="text-muted small mb-3" id="quote_luna">"Soft purrs and quiet moments heal everything."</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-secondary-custom rounded-pill" onclick="toggleSoundscape('cat_purr')">
+                        <i class="bi bi-volume-up-fill me-1"></i> Start Purr Therapy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pet 3: Bamboo the Coziest Panda -->
+        <div class="col-md-6 col-lg-3 pet-item" data-category="panda">
+            <div class="pet-card text-center p-3">
+                <div class="pet-avatar-box rounded-3 mb-3" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);">
+                    <span>🐼</span>
+                </div>
+                <h5 class="font-heading fw-bold mb-1">Bamboo</h5>
+                <span class="badge bg-success rounded-pill mb-2">Zen Panda</span>
+                <p class="text-muted small mb-3" id="quote_bamboo">"Take things one bite at a time. No rush."</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-outline-success rounded-pill" onclick="interactPet('bamboo', 'Bamboo shares a piece of sweet bamboo and gives a slow zen nod.')">
+                        <i class="bi bi-emoji-smile me-1"></i> Hug Panda
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pet 4: Mochi the Happy Hamster -->
+        <div class="col-md-6 col-lg-3 pet-item" data-category="dog">
+            <div class="pet-card text-center p-3">
+                <div class="pet-avatar-box rounded-3 mb-3" style="background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);">
+                    <span>🐹</span>
+                </div>
+                <h5 class="font-heading fw-bold mb-1">Mochi</h5>
+                <span class="badge bg-danger rounded-pill mb-2">Pygmy Hamster</span>
+                <p class="text-muted small mb-3" id="quote_mochi">"Small steps add up to big achievements!"</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-sm btn-outline-warning text-dark rounded-pill fw-bold" onclick="interactPet('mochi', 'Mochi runs on the wheel at high speed, cheering for you!')">
+                        <i class="bi bi-star-fill me-1 text-warning"></i> Cheer with Mochi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function interactPet(petId, msg) {
+        showToast('Pet Companion Interaction', msg, 'success');
+    }
+
+    function filterPets(category) {
+        const items = document.querySelectorAll('.pet-item');
+        items.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+</script>
+{% endblock %}

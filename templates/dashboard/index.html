@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Executive Wellness Dashboard - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Hero Greeting Banner -->
+    <div class="hero-gradient mb-4 shadow-lg d-flex flex-wrap justify-content-between align-items-center">
+        <div class="position-relative z-1 max-w-600">
+            <div class="badge bg-white bg-opacity-20 text-white rounded-pill px-3 py-1 mb-2 font-heading small">
+                <i class="bi bi-shield-check me-1"></i> Longitudinal Wellness Analytics
+            </div>
+            <h2 class="font-heading fw-bold mb-2">Welcome Back, {{ user.first_name|default:user.username }}! 👋</h2>
+            <p class="text-white-50 mb-3">Track your depression risk trajectory, sentiment patterns, and access immediate AI wellness support.</p>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="{% url 'take_assessment' %}" class="btn btn-primary-custom rounded-pill px-4">
+                    <i class="bi bi-clipboard-pulse me-1"></i> Take Screening
+                </a>
+                <a href="{% url 'chatbot' %}" class="btn btn-outline-light rounded-pill px-4">
+                    <i class="bi bi-robot me-1"></i> Chat with AI Assistant
+                </a>
+                <a href="{% url 'export_report' %}" target="_blank" class="btn btn-outline-light rounded-pill px-3" data-bs-toggle="tooltip" title="Download Medical Summary">
+                    <i class="bi bi-file-earmark-pdf me-1"></i> Clinical Report
+                </a>
+            </div>
+        </div>
+        <div class="position-relative z-1 text-center text-md-end mt-3 mt-md-0">
+            <div class="p-3 bg-white bg-opacity-10 rounded-4 border border-white border-opacity-25 backdrop-blur">
+                <div class="text-white-50 small fw-bold">ACTIVE WELLNESS STREAK</div>
+                <div class="display-5 font-heading fw-bold text-warning mb-0">🔥 {{ streak }} Days</div>
+                <div class="small text-white-50 mt-1">Keep checking in daily!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- High Risk SOS Crisis Alert Banner -->
+    {% if is_high_risk %}
+    <div class="alert alert-danger shadow-md rounded-4 p-3 border-danger mb-4 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <div class="bg-danger text-white rounded-circle p-2 me-3 fs-4 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+            <div>
+                <h5 class="fw-bold mb-0 text-danger">Elevated Risk Category Detected</h5>
+                <p class="mb-0 text-dark small">Your latest PHQ-9 score ({{ latest_assessment.total_score }}/27) indicates moderate to severe symptom risk. Please consider connecting with a healthcare professional or crisis helpline.</p>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-danger font-heading fw-bold px-3 py-2 rounded-pill shadow-sm text-nowrap ms-2" data-bs-toggle="modal" data-bs-target="#sosModal">
+                <i class="bi bi-telephone-fill me-1"></i> Get 24/7 Crisis Help
+            </button>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Metric Cards Row -->
+    <div class="row g-3 mb-4">
+        <!-- Metric 1: Latest PHQ-9 -->
+        <div class="col-xl-3 col-md-6">
+            <div class="metric-card h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-muted small fw-bold tracking-wider">PHQ-9 SCREENING</span>
+                    <div class="metric-icon-box bg-primary-subtle text-primary">
+                        <i class="bi bi-clipboard-check"></i>
+                    </div>
+                </div>
+                {% if latest_assessment %}
+                <div class="d-flex align-items-baseline mb-1">
+                    <h3 class="font-heading fw-bold mb-0 me-2">{{ latest_assessment.total_score }}</h3>
+                    <span class="text-muted fs-6">/ 27</span>
+                </div>
+                <div>
+                    {% if latest_assessment.total_score < 5 %}
+                    <span class="badge-soft-success">Minimal Symptoms</span>
+                    {% elif latest_assessment.total_score < 10 %}
+                    <span class="badge-soft-warning">Mild Risk</span>
+                    {% elif latest_assessment.total_score < 15 %}
+                    <span class="badge-soft-warning">Moderate Risk</span>
+                    {% else %}
+                    <span class="badge-soft-danger">Severe Risk</span>
+                    {% endif %}
+                    <span class="text-muted small ms-2">{{ latest_assessment.created_at|date:"b d" }}</span>
+                </div>
+                {% else %}
+                <p class="text-muted mb-0 small mt-2">No screening taken yet.</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Metric 2: Mood Rating -->
+        <div class="col-xl-3 col-md-6">
+            <div class="metric-card h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-muted small fw-bold tracking-wider">LATEST MOOD</span>
+                    <div class="metric-icon-box bg-warning-subtle text-warning">
+                        <i class="bi bi-emoji-smile"></i>
+                    </div>
+                </div>
+                {% if latest_mood %}
+                <h4 class="font-heading fw-bold mb-1">{{ latest_mood.get_mood_score_display }}</h4>
+                <div class="text-muted small">{{ latest_mood.created_at|date:"b d, H:i" }}</div>
+                {% else %}
+                <p class="text-muted mb-0 small mt-2">No mood logged today.</p>
+                {% endif %}
+                <div class="mt-2">
+                    <a href="{% url 'mood_list' %}" class="small text-decoration-none text-primary fw-semibold">+ Log Today's Mood</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metric 3: Journal Sentiment -->
+        <div class="col-xl-3 col-md-6">
+            <div class="metric-card h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-muted small fw-bold tracking-wider">JOURNAL SENTIMENT</span>
+                    <div class="metric-icon-box bg-success-subtle text-success">
+                        <i class="bi bi-journal-text"></i>
+                    </div>
+                </div>
+                <h3 class="font-heading fw-bold mb-1">{{ total_journals }} <span class="fs-6 text-muted font-body font-normal">Entries</span></h3>
+                <div class="text-muted small">NLP VADER Sentiment Logged</div>
+                <div class="mt-2">
+                    <a href="{% url 'journal_list' %}" class="small text-decoration-none text-primary fw-semibold">+ Write Entry</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metric 4: AI & Guided Tools -->
+        <div class="col-xl-3 col-md-6">
+            <div class="metric-card h-100">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-muted small fw-bold tracking-wider">RELAXATION TOOLS</span>
+                    <div class="metric-icon-box bg-teal-subtle text-teal" style="background: rgba(35, 194, 165, 0.15); color: #0d9488;">
+                        <i class="bi bi-wind"></i>
+                    </div>
+                </div>
+                <h5 class="font-heading fw-bold mb-2">Grounding & Breathing</h5>
+                <a href="{% url 'breathing' %}" class="btn btn-sm btn-outline-success rounded-pill w-100 fw-semibold">
+                    <i class="bi bi-play-circle me-1"></i> Start 4-4-4-4 Box Breath
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics & Charts Grid -->
+    <div class="row g-4">
+        <!-- Main Line Chart: PHQ-9 Trajectory -->
+        <div class="col-lg-8">
+            <div class="glass-card p-4 h-100 border-0 shadow-md">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="font-heading fw-bold mb-0"><i class="bi bi-graph-up-arrow text-primary me-2"></i>PHQ-9 Score Trajectory Over Time</h5>
+                    <a href="{% url 'history_list' %}" class="btn btn-sm btn-outline-primary rounded-pill">View All Logs</a>
+                </div>
+                {% if chart_scores %}
+                <div style="height: 300px;">
+                    <canvas id="dashboardScoreChart"></canvas>
+                </div>
+                {% else %}
+                <div class="text-center py-5 text-muted">
+                    <i class="bi bi-clipboard-x display-4 text-muted mb-2"></i>
+                    <p class="mb-3">No assessment history recorded yet. Complete your first PHQ-9 assessment to unlock longitudinal risk tracking!</p>
+                    <a href="{% url 'take_assessment' %}" class="btn btn-primary-custom rounded-pill px-4">Take First Assessment</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Secondary Chart: Journal Sentiment Distribution -->
+        <div class="col-lg-4">
+            <div class="glass-card p-4 h-100 border-0 shadow-md">
+                <h5 class="font-heading fw-bold mb-3"><i class="bi bi-pie-chart text-success me-2"></i>Journal Sentiment NLP</h5>
+                {% if total_journals > 0 %}
+                <div style="height: 240px;" class="position-relative">
+                    <canvas id="dashboardSentimentChart"></canvas>
+                </div>
+                {% else %}
+                <div class="text-center py-5 text-muted">
+                    <i class="bi bi-journal-x display-4 text-muted mb-2"></i>
+                    <p class="mb-3">No journal entries written yet.</p>
+                    <a href="{% url 'journal_list' %}" class="btn btn-outline-success rounded-pill px-3">Create First Journal</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if chart_scores %}
+{{ chart_dates|json_script:"dashboardChartDates" }}
+{{ chart_scores|json_script:"dashboardChartScores" }}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let dates = [];
+        let scores = [];
+        try {
+            const datesRaw = document.getElementById('dashboardChartDates').textContent;
+            const scoresRaw = document.getElementById('dashboardChartScores').textContent;
+            dates = typeof datesRaw === 'string' ? JSON.parse(datesRaw) : datesRaw;
+            scores = typeof scoresRaw === 'string' ? JSON.parse(scoresRaw) : scoresRaw;
+            if (typeof dates === 'string') dates = JSON.parse(dates);
+            if (typeof scores === 'string') scores = JSON.parse(scores);
+        } catch(e) {
+            console.error("Error parsing dashboard score chart data:", e);
+        }
+        renderScoreHistoryChart('dashboardScoreChart', dates, scores);
+    });
+</script>
+{% endif %}
+
+{% if total_journals > 0 %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        renderSentimentChart(
+            'dashboardSentimentChart',
+            [Number('{{ sent_counts.Positive|default:0 }}'), Number('{{ sent_counts.Neutral|default:0 }}'), Number('{{ sent_counts.Negative|default:0 }}')]
+        );
+    });
+</script>
+{% endif %}
+{% endblock %}

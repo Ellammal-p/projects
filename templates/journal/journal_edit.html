@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Journal Entry - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card-custom p-4 shadow">
+                <h4 class="fw-bold mb-3"><i class="bi bi-pencil-square text-primary me-2"></i> Edit Journal Entry</h4>
+                <form method="post" action="{% url 'journal_edit' pk=entry.pk %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Entry Title</label>
+                        {{ form.title }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Reflection Content</label>
+                        {{ form.content }}
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <a href="{% url 'journal_list' %}" class="btn btn-outline-secondary rounded-pill">Cancel</a>
+                        <button type="submit" class="btn btn-primary rounded-pill fw-bold px-4">
+                            <i class="bi bi-save me-1"></i> Update & Re-Analyze Sentiment
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

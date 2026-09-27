@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Guided Breathing & Grounding Tool - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <!-- Header Card -->
+            <div class="glass-card p-4 mb-4 text-center border-0 shadow-md">
+                <div class="d-inline-flex align-items-center justify-content-center bg-teal text-white rounded-circle mb-3" style="width: 64px; height: 64px; background: linear-gradient(135deg, #23c2a5 0%, #0d9488 100%) !important;">
+                    <i class="bi bi-wind fs-2"></i>
+                </div>
+                <h2 class="font-heading fw-bold mb-1">Guided Relaxation & Grounding</h2>
+                <p class="text-muted mb-0">Use Box Breathing and 5-4-3-2-1 Sensory Grounding to quickly reduce acute stress and panic.</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <ul class="nav nav-pills nav-justified mb-4 p-2 bg-white rounded-4 shadow-sm border" id="relaxationTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active fw-bold py-2.5 rounded-3" id="breathing-tab" data-bs-toggle="pill" data-bs-target="#breathingContent" type="button" role="tab">
+                        <i class="bi bi-circle-pulse me-2"></i>Box Breathing (4-4-4-4)
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-bold py-2.5 rounded-3" id="grounding-tab" data-bs-toggle="pill" data-bs-target="#groundingContent" type="button" role="tab">
+                        <i class="bi bi-eye me-2"></i>5-4-3-2-1 Sensory Grounding
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="relaxationTabsContent">
+                <!-- Tab 1: Box Breathing Visualizer -->
+                <div class="tab-pane fade show active" id="breathingContent" role="tabpanel">
+                    <div class="glass-card p-5 text-center shadow-lg border-0">
+                        <h4 class="font-heading fw-bold mb-2">Box Breathing Technique</h4>
+                        <p class="text-muted mb-4">Follow the expanding circle. Inhale (4s) → Hold (4s) → Exhale (4s) → Hold (4s).</p>
+
+                        <!-- Animated Breathing Ring -->
+                        <div class="breathing-container my-4">
+                            <div class="breathing-ring-outer">
+                                <div id="breathingRing" class="breathing-ring-inner">
+                                    <div id="breathInstruction" class="fw-bold fs-5">Ready</div>
+                                    <div id="breathTimer" class="fs-4 mt-1 font-monospace">4</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="d-flex justify-content-center gap-3 mt-4">
+                            <button id="startBreathingBtn" class="btn btn-secondary-custom btn-lg px-5 rounded-pill fw-bold" onclick="toggleBreathing()">
+                                <i class="bi bi-play-fill me-1"></i> Start Session
+                            </button>
+                            <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" onclick="resetBreathing()">
+                                <i class="bi bi-arrow-counterclockwise"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: 5-4-3-2-1 Grounding -->
+                <div class="tab-pane fade" id="groundingContent" role="tabpanel">
+                    <div class="glass-card p-4 shadow-lg border-0">
+                        <h4 class="font-heading fw-bold mb-3"><i class="bi bi-shield-heart me-2 text-primary"></i>5-4-3-2-1 Sensory Grounding</h4>
+                        <p class="text-muted mb-4">Focus on your immediate environment to anchor your mind during times of high anxiety or overwhelming emotions.</p>
+
+                        <div class="accordion accordion-flush rounded-3 overflow-hidden border" id="groundingAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#g1" aria-expanded="true">
+                                        <span class="badge bg-primary rounded-circle me-2">5</span> Acknowledge 5 THINGS YOU CAN SEE
+                                    </button>
+                                </h2>
+                                <div id="g1" class="accordion-collapse collapse show" data-bs-parent="#groundingAccordion">
+                                    <div class="accordion-body text-secondary">
+                                        Look around your room. Notice details: a pen on the desk, light reflecting on a frame, a shadow, a pattern on the wall, or a plant leaf.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-success" type="button" data-bs-toggle="collapse" data-bs-target="#g2">
+                                        <span class="badge bg-success rounded-circle me-2">4</span> Acknowledge 4 THINGS YOU CAN TOUCH
+                                    </button>
+                                </h2>
+                                <div id="g2" class="accordion-collapse collapse" data-bs-parent="#groundingAccordion">
+                                    <div class="accordion-body text-secondary">
+                                        Feel the texture of your shirt, the firmness of your chair, the cool surface of your table, or the ground beneath your feet.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-info" type="button" data-bs-toggle="collapse" data-bs-target="#g3">
+                                        <span class="badge bg-info rounded-circle me-2">3</span> Acknowledge 3 THINGS YOU CAN HEAR
+                                    </button>
+                                </h2>
+                                <div id="g3" class="accordion-collapse collapse" data-bs-parent="#groundingAccordion">
+                                    <div class="accordion-body text-secondary">
+                                        Listen closely: a distant car, the whirring of a fan, birds chirping, or your own calm breath.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#g4">
+                                        <span class="badge bg-warning rounded-circle me-2">2</span> Acknowledge 2 THINGS YOU CAN SMELL
+                                    </button>
+                                </h2>
+                                <div id="g4" class="accordion-collapse collapse" data-bs-parent="#groundingAccordion">
+                                    <div class="accordion-body text-secondary">
+                                        Notice smells around you: fresh air, coffee, paper, soap, or essential oils.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#g5">
+                                        <span class="badge bg-danger rounded-circle me-2">1</span> Acknowledge 1 THING YOU CAN TASTE
+                                    </button>
+                                </h2>
+                                <div id="g5" class="accordion-collapse collapse" data-bs-parent="#groundingAccordion">
+                                    <div class="accordion-body text-secondary">
+                                        Notice the taste in your mouth, or take a sip of water or a mint.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let isBreathingActive = false;
+    let breathInterval = null;
+    let currentPhase = 0; // 0: Inhale, 1: Hold, 2: Exhale, 3: Hold
+    let secondsLeft = 4;
+
+    const phases = [
+        { label: 'Inhale...', class: 'expand' },
+        { label: 'Hold...', class: 'expand' },
+        { label: 'Exhale...', class: 'shrink' },
+        { label: 'Hold...', class: 'shrink' }
+    ];
+
+    function toggleBreathing() {
+        const btn = document.getElementById('startBreathingBtn');
+        if (isBreathingActive) {
+            stopBreathing();
+            btn.innerHTML = '<i class="bi bi-play-fill me-1"></i> Start Session';
+            btn.classList.replace('btn-danger', 'btn-secondary-custom');
+        } else {
+            startBreathing();
+            btn.innerHTML = '<i class="bi bi-pause-fill me-1"></i> Pause Session';
+            btn.classList.replace('btn-secondary-custom', 'btn-danger');
+        }
+    }
+
+    function startBreathing() {
+        isBreathingActive = true;
+        secondsLeft = 4;
+        currentPhase = 0;
+        updateUI();
+
+        breathInterval = setInterval(() => {
+            secondsLeft--;
+            if (secondsLeft <= 0) {
+                currentPhase = (currentPhase + 1) % 4;
+                secondsLeft = 4;
+            }
+            updateUI();
+        }, 1000);
+    }
+
+    function updateUI() {
+        const ring = document.getElementById('breathingRing');
+        const label = document.getElementById('breathInstruction');
+        const timer = document.getElementById('breathTimer');
+
+        const phase = phases[currentPhase];
+        label.textContent = phase.label;
+        timer.textContent = secondsLeft;
+
+        ring.className = 'breathing-ring-inner ' + phase.class;
+    }
+
+    function stopBreathing() {
+        isBreathingActive = false;
+        clearInterval(breathInterval);
+    }
+
+    function resetBreathing() {
+        stopBreathing();
+        currentPhase = 0;
+        secondsLeft = 4;
+        const ring = document.getElementById('breathingRing');
+        ring.className = 'breathing-ring-inner';
+        document.getElementById('breathInstruction').textContent = 'Ready';
+        document.getElementById('breathTimer').textContent = '4';
+
+        const btn = document.getElementById('startBreathingBtn');
+        btn.innerHTML = '<i class="bi bi-play-fill me-1"></i> Start Session';
+        btn.classList.replace('btn-danger', 'btn-secondary-custom');
+    }
+</script>
+{% endblock %}

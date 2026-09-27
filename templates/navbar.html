@@ -1,0 +1,86 @@
+<nav id="mainNavbar" class="navbar navbar-expand-xl navbar-dark navbar-mindwell">
+    <div class="container-fluid px-3 px-xl-5">
+        <!-- Brand Logo -->
+        <a class="navbar-brand d-flex align-items-center flex-shrink-0 me-3" href="{% url 'home' %}">
+            <div class="bg-primary text-white rounded-3 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%) !important;">
+                <i class="bi bi-heart-pulse-fill fs-5"></i>
+            </div>
+            <span class="font-heading fw-bold fs-4 text-white">MindWell <span class="badge bg-primary text-white rounded-pill font-body fs-6 fw-normal ms-1">AI</span></span>
+        </a>
+
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0 ms-xl-2 gap-1 align-items-xl-center">
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                        href="{% url 'home' %}"><i class="bi bi-house-door me-1"></i> Home</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap {% if request.resolver_match.url_name == 'take_assessment' %}active{% endif %}"
+                        href="{% url 'take_assessment' %}"><i class="bi bi-clipboard-check me-1"></i> Assessment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}"
+                        href="{% url 'dashboard' %}"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap {% if request.resolver_match.url_name == 'mood_list' %}active{% endif %}"
+                        href="{% url 'mood_list' %}"><i class="bi bi-emoji-smile me-1"></i> Mood Tracker</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-nowrap {% if request.resolver_match.url_name == 'journal_list' %}active{% endif %}"
+                        href="{% url 'journal_list' %}"><i class="bi bi-journal-text me-1"></i> Journal</a>
+                </li>
+                {% endif %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-nowrap" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-lightbulb me-1"></i> Support
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-lg rounded-3">
+                        <li><a class="dropdown-item py-2" href="{% url 'breathing' %}"><i class="bi bi-wind me-2 text-info"></i>Guided Breathing</a></li>
+                        <li><a class="dropdown-item py-2" href="{% url 'pet_therapy' %}"><i class="bi bi-heart-pulse me-2 text-warning"></i>Pets & Boosters</a></li>
+                        <li><a class="dropdown-item py-2" href="{% url 'wellness_tips' %}"><i class="bi bi-balloon me-2 text-success"></i>Wellness Tips</a></li>
+                        <li><a class="dropdown-item py-2" href="{% url 'support_resources' %}"><i class="bi bi-telephone me-2 text-danger"></i>Emergency Helplines</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right Side CTA Actions -->
+            <div class="d-flex align-items-center gap-2 flex-shrink-0 mt-3 mt-xl-0">
+                <!-- SOS Crisis Modal Trigger -->
+                <button type="button" class="btn btn-outline-danger btn-sm rounded-pill px-3 me-1 fw-bold text-nowrap flex-shrink-0" data-bs-toggle="modal" data-bs-target="#sosModal">
+                    <i class="bi bi-exclamation-octagon-fill me-1"></i> SOS Crisis
+                </button>
+
+                {% if user.is_authenticated %}
+                <div class="dropdown flex-shrink-0">
+                    <button class="btn btn-light rounded-pill px-3 dropdown-toggle border text-nowrap" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle me-1 text-primary"></i> {{ user.username }}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-3">
+                        <li><a class="dropdown-item py-2" href="{% url 'profile' %}"><i class="bi bi-person-gear me-2 text-muted"></i>Profile Settings</a></li>
+                        <li><a class="dropdown-item py-2" href="{% url 'assessment_history' %}"><i class="bi bi-clock-history me-2 text-muted"></i>Screening History</a></li>
+                        <li><a class="dropdown-item py-2" href="{% url 'export_report' %}" target="_blank"><i class="bi bi-file-earmark-pdf me-2 text-muted"></i>Clinical Summary Report</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="{% url 'logout' %}"><i class="bi bi-box-arrow-right me-2"></i>Log Out</a></li>
+                    </ul>
+                </div>
+                {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-light rounded-pill px-3 text-nowrap flex-shrink-0">
+                    Login
+                </a>
+                <a href="{% url 'register' %}" class="btn btn-mindwell-primary text-white rounded-pill px-3 text-nowrap flex-shrink-0">
+                    Get Started
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</nav>

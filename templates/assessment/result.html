@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Screening Analysis Result - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <!-- Result Summary Glass Card -->
+            <div class="glass-card p-4 p-md-5 text-center mb-4 border-0 shadow-lg">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="badge bg-primary-subtle text-primary font-heading px-3 py-2 rounded-pill fw-bold">PHQ-9 SCREENING RECORD #{{ assessment.pk }}</span>
+                    <a href="{% url 'export_report' %}" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill fw-bold">
+                        <i class="bi bi-file-earmark-pdf me-1"></i> Download PDF Report
+                    </a>
+                </div>
+
+                <h2 class="font-heading fw-bold mb-1">Assessment Screening Result</h2>
+                <p class="text-muted small">Completed on {{ assessment.created_at|date:"F d, Y \a\t H:i" }}</p>
+
+                <!-- Score Gauge Display -->
+                <div class="my-4 py-4 px-3 bg-light rounded-4 border">
+                    <div class="display-2 font-heading fw-bold text-dark mb-2">
+                        {{ assessment.total_score }} <span class="fs-4 text-muted font-body font-normal">/ 27</span>
+                    </div>
+
+                    <div class="mb-3">
+                        {% if assessment.total_score < 5 %}
+                        <span class="badge-soft-success fs-5 px-4 py-2"><i class="bi bi-emoji-smile me-2"></i> Minimal Symptoms</span>
+                        {% elif assessment.total_score < 10 %}
+                        <span class="badge-soft-warning fs-5 px-4 py-2"><i class="bi bi-info-circle me-2"></i> Mild Symptom Risk</span>
+                        {% elif assessment.total_score < 15 %}
+                        <span class="badge-soft-warning fs-5 px-4 py-2"><i class="bi bi-exclamation-circle me-2"></i> Moderate Symptom Risk</span>
+                        {% elif assessment.total_score < 20 %}
+                        <span class="badge-soft-danger fs-5 px-4 py-2"><i class="bi bi-exclamation-triangle me-2"></i> Moderately Severe Risk</span>
+                        {% else %}
+                        <span class="badge-soft-danger fs-5 px-4 py-2"><i class="bi bi-shield-alert me-2"></i> Severe Symptom Risk</span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Machine Learning Prediction Badge -->
+                    <div class="d-inline-block bg-white px-3 py-2 rounded-pill border shadow-sm small">
+                        <i class="bi bi-cpu text-primary me-1"></i> <strong>ML Classifier Output:</strong> {{ assessment.ml_prediction }} (Confidence: {{ assessment.ml_confidence|floatformat:1 }}%)
+                    </div>
+                </div>
+
+                <!-- Immediate Emergency Crisis Banner -->
+                {% if is_high_risk %}
+                <div class="alert alert-danger text-start p-4 mb-4 border-danger rounded-4 shadow-sm">
+                    <div class="d-flex align-items-start">
+                        <i class="bi bi-exclamation-triangle-fill display-5 text-danger me-3"></i>
+                        <div>
+                            <h5 class="font-heading fw-bold text-danger mb-1">Immediate Crisis Support Encouraged</h5>
+                            <p class="mb-3 text-dark">Your screening score indicates significant emotional distress. Please know that compassionate, confidential support is freely available right now. We strongly encourage reaching out to a healthcare professional or helpline:</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="tel:14416" class="btn btn-danger btn-sm rounded-pill fw-bold"><i class="bi bi-telephone-fill me-1"></i> Call Tele-MANAS: 14416</a>
+                                <a href="tel:18005990019" class="btn btn-outline-danger btn-sm rounded-pill fw-bold"><i class="bi bi-telephone-fill me-1"></i> Call KIRAN: 1800-599-0019</a>
+                                <button class="btn btn-sm btn-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#sosModal">View All Support Numbers</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Result Interpretation -->
+                <div class="text-start p-4 bg-white border rounded-4 mb-4">
+                    <h5 class="font-heading fw-bold mb-3"><i class="bi bi-lightbulb text-warning me-2"></i> Clinical Score Ranges & Next Steps</h5>
+                    <ul class="mb-0 text-secondary" style="line-height: 1.7;">
+                        <li><strong>0–4 (Minimal):</strong> Continue maintaining healthy sleep, exercise, and social routines.</li>
+                        <li><strong>5–9 (Mild):</strong> Practice stress management, mindfulness, and stay connected with family/friends.</li>
+                        <li><strong>10–14 (Moderate):</strong> Professional counseling or consultation is recommended to learn CBT coping strategies.</li>
+                        <li><strong>15–27 (Moderately Severe / Severe):</strong> Clinical evaluation and professional counseling support are strongly advised.</li>
+                    </ul>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="p-3 bg-light border rounded-3 text-start mb-4 small text-muted">
+                    <i class="bi bi-shield-check me-1 text-primary"></i> <strong>Educational Notice:</strong> This questionnaire is an educational risk-screening tool. It does NOT replace clinical medical advice or diagnosis.
+                </div>
+
+                <!-- Navigation CTAs -->
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <a href="{% url 'take_assessment' %}" class="btn btn-primary-custom rounded-pill px-4">
+                        <i class="bi bi-arrow-repeat me-1"></i> Take Screening Again
+                    </a>
+                    <a href="{% url 'dashboard' %}" class="btn btn-outline-primary rounded-pill px-4">
+                        <i class="bi bi-speedometer2 me-1"></i> View Personal Dashboard
+                    </a>
+                    <a href="{% url 'history_list' %}" class="btn btn-outline-secondary rounded-pill px-4">
+                        <i class="bi bi-clock-history me-1"></i> Screening History
+                    </a>
+                </div>
+            </div>
+
+            <!-- Itemized Response Breakdown -->
+            <div class="glass-card p-4 border-0 shadow-md">
+                <h5 class="font-heading fw-bold mb-3"><i class="bi bi-list-check text-primary me-2"></i> Itemized Questionnaire Responses</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Questionnaire Item</th>
+                                <th class="text-center">Score (0-3)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ans in answers %}
+                            <tr>
+                                <td><strong>Q{{ ans.question_number }}</strong></td>
+                                <td>{{ ans.question_text }}</td>
+                                <td class="text-center">
+                                    <span class="badge bg-secondary rounded-pill px-3">{{ ans.selected_option }}</span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

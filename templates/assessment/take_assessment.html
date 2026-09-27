@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}PHQ-9 Depression Risk Screening - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <!-- Header Banner -->
+            <div class="glass-card p-4 mb-4 shadow-md border-0">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="bg-primary text-white rounded-3 p-3 me-3 d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%) !important;">
+                        <i class="bi bi-clipboard-pulse fs-3"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-heading fw-bold mb-1">PHQ-9 Educational Screening Questionnaire</h3>
+                        <p class="text-muted mb-0">Over the <strong>last 2 weeks</strong>, how often have you been bothered by any of the following symptoms?</p>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mt-3">
+                    <div class="d-flex justify-content-between small text-muted mb-1 font-heading fw-bold">
+                        <span>Assessment Progress</span>
+                        <span id="answeredCountText">0 of 9 Answered</span>
+                    </div>
+                    <div class="progress" style="height: 10px; border-radius: 999px;">
+                        <div id="assessmentProgressBar" class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questionnaire Form -->
+            <form method="post" id="assessmentForm" action="{% url 'take_assessment' %}">
+                {% csrf_token %}
+
+                {% for q in questions %}
+                <div class="glass-card p-4 mb-4 shadow-md border-0 question-step-card" id="qCard_{{ q.order }}">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <span class="badge bg-primary-subtle text-primary fw-bold font-heading px-3 py-2 rounded-pill fs-6">Question {{ q.order }} of 9</span>
+                        <span class="small text-muted">PHQ-9 Standard Metric</span>
+                    </div>
+                    
+                    <h4 class="font-heading fw-bold text-dark mb-4" style="line-height: 1.4;">
+                        {{ q.text }}
+                    </h4>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="option-btn d-flex align-items-center">
+                                <input class="form-check-input me-3" type="radio" name="q_{{ q.order }}" id="q_{{ q.order }}_0" value="0" required onchange="updateProgress()">
+                                <label class="form-check-label w-100 cursor-pointer" for="q_{{ q.order }}_0">
+                                    <div class="fw-bold">0 — Not at all</div>
+                                    <div class="small text-muted">Never bothered by this</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="option-btn d-flex align-items-center">
+                                <input class="form-check-input me-3" type="radio" name="q_{{ q.order }}" id="q_{{ q.order }}_1" value="1" onchange="updateProgress()">
+                                <label class="form-check-label w-100 cursor-pointer" for="q_{{ q.order }}_1">
+                                    <div class="fw-bold">1 — Several days</div>
+                                    <div class="small text-muted">Occurred 1-6 days</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="option-btn d-flex align-items-center">
+                                <input class="form-check-input me-3" type="radio" name="q_{{ q.order }}" id="q_{{ q.order }}_2" value="2" onchange="updateProgress()">
+                                <label class="form-check-label w-100 cursor-pointer" for="q_{{ q.order }}_2">
+                                    <div class="fw-bold">2 — More than half the days</div>
+                                    <div class="small text-muted">Occurred 7-11 days</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="option-btn d-flex align-items-center">
+                                <input class="form-check-input me-3" type="radio" name="q_{{ q.order }}" id="q_{{ q.order }}_3" value="3" onchange="updateProgress()">
+                                <label class="form-check-label w-100 cursor-pointer" for="q_{{ q.order }}_3">
+                                    <div class="fw-bold">3 — Nearly every day</div>
+                                    <div class="small text-muted">Occurred 12-14 days</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="d-flex justify-content-between align-items-center my-4">
+                    <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary rounded-pill px-4">
+                        <i class="bi bi-x-circle me-1"></i> Cancel
+                    </a>
+                    <button type="submit" class="btn btn-primary-custom btn-lg rounded-pill px-5 shadow-lg">
+                        <i class="bi bi-send-check me-2"></i> Submit & Analyze PHQ-9
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.option-btn').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const radio = card.querySelector('input[type="radio"]');
+                    if (radio) {
+                        radio.checked = true;
+                        updateProgress();
+                    }
+                }
+            });
+        });
+        updateProgress();
+    });
+
+    function updateProgress() {
+        let answered = 0;
+        for (let i = 1; i <= 9; i++) {
+            const selected = document.querySelector(`input[name="q_${i}"]:checked`);
+            if (selected) answered++;
+        }
+
+        const pct = Math.round((answered / 9) * 100);
+        const bar = document.getElementById('assessmentProgressBar');
+        const text = document.getElementById('answeredCountText');
+
+        if (bar) bar.style.width = pct + '%';
+        if (text) text.textContent = `${answered} of 9 Answered (${pct}%)`;
+    }
+</script>
+{% endblock %}

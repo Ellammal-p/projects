@@ -1,0 +1,37 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+.vite/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Environment
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ML Artifacts
+ml_model/artifacts/*.pkl
+ml_model/artifacts/*.pt
+ml_model/artifacts/*.bin
+ml_model/artifacts/*.onnx
+
+

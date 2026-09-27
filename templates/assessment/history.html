@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}Assessment History - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold mb-1">Assessment History</h2>
+            <p class="text-muted mb-0">Track your PHQ-9 screening scores and risk analysis trends over time.</p>
+        </div>
+        <div>
+            <a href="{% url 'take_assessment' %}" class="btn btn-info text-dark fw-bold rounded-pill shadow-sm">
+                <i class="bi bi-plus-circle me-1"></i> New Assessment
+            </a>
+        </div>
+    </div>
+
+    <!-- Chart Card -->
+    {% if chart_scores %}
+    <div class="card-custom p-4 mb-4">
+        <h5 class="fw-bold mb-3"><i class="bi bi-graph-up text-info me-2"></i> Score Trajectory Over Time</h5>
+        <div style="height: 300px;">
+            <canvas id="historyScoreChart"></canvas>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- History Table Card -->
+    <div class="card-custom p-4">
+        <h5 class="fw-bold mb-3"><i class="bi bi-table me-2"></i> Past Assessment Log</h5>
+        {% if assessments %}
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>PHQ-9 Score</th>
+                        <th>Symptom Indicator</th>
+                        <th>ML Prediction</th>
+                        <th class="text-end">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in assessments %}
+                    <tr>
+                        <td>{{ a.created_at|date:"M d, Y H:i" }}</td>
+                        <td>
+                            <strong class="fs-5">{{ a.total_score }}</strong> <span class="text-muted small">/ 27</span>
+                        </td>
+                        <td>
+                            {% if a.risk_category == 'Minimal Symptoms' %}
+                            <span class="badge badge-minimal px-3 py-1">Minimal</span>
+                            {% elif a.risk_category == 'Mild Symptom Risk' %}
+                            <span class="badge badge-mild px-3 py-1">Mild Risk</span>
+                            {% elif a.risk_category == 'Moderate Symptom Risk' %}
+                            <span class="badge badge-moderate px-3 py-1">Moderate Risk</span>
+                            {% elif a.risk_category == 'Moderately Severe Risk' %}
+                            <span class="badge badge-mod-severe px-3 py-1">Mod. Severe</span>
+                            {% else %}
+                            <span class="badge badge-severe px-3 py-1">Severe Risk</span>
+                            {% endif %}
+                        </td>
+                        <td><span class="small text-muted"><i class="bi bi-cpu me-1"></i> {{ a.ml_prediction }}</span>
+                        </td>
+                        <td class="text-end">
+                            <a href="{% url 'assessment_result' pk=a.pk %}"
+                                class="btn btn-sm btn-outline-info rounded-pill">
+                                <i class="bi bi-eye me-1"></i> View Result
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="text-center py-5 text-muted">
+            <i class="bi bi-clipboard-x display-3 mb-3"></i>
+            <h5>No Previous Assessments Found</h5>
+            <p>Take your first educational screening assessment to build your risk tracking history!</p>
+            <a href="{% url 'take_assessment' %}" class="btn btn-info text-dark rounded-pill fw-bold">Start
+                Assessment</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if chart_scores %}
+{{ chart_dates|json_script:"historyChartDates" }}
+{{ chart_scores|json_script:"historyChartScores" }}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let dates = [];
+        let scores = [];
+        try {
+            const datesRaw = document.getElementById('historyChartDates').textContent;
+            const scoresRaw = document.getElementById('historyChartScores').textContent;
+            dates = typeof datesRaw === 'string' ? JSON.parse(datesRaw) : datesRaw;
+            scores = typeof scoresRaw === 'string' ? JSON.parse(scoresRaw) : scoresRaw;
+            if (typeof dates === 'string') dates = JSON.parse(dates);
+            if (typeof scores === 'string') scores = JSON.parse(scores);
+        } catch(e) {
+            console.error("Error parsing history score chart data:", e);
+        }
+        renderScoreHistoryChart('historyScoreChart', dates, scores);
+    });
+</script>
+{% endif %}
+{% endblock %}

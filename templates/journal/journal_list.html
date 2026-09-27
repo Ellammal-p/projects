@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}Private Journal & NLP Sentiment Analysis - MindCare AI{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold mb-1">Private Journal & NLP Sentiment Analysis</h2>
+            <p class="text-muted mb-0">Express your reflections. Integrated NLTK NLP evaluates entry text for emotional
+                sentiment polarity.</p>
+        </div>
+    </div>
+
+    <!-- NLP Disclaimer Alert -->
+    <div class="disclaimer-banner mb-4">
+        <i class="bi bi-info-circle-fill me-2"></i>
+        <strong>Experimental NLP Feature:</strong> Sentiment analysis uses Natural Language Processing (NLTK VADER) to
+        score text polarity. It is an experimental feature and is <strong>not a mental-health diagnosis or proof of
+            depression</strong>.
+    </div>
+
+    <div class="row g-4 mb-4">
+        <!-- New Entry Form -->
+        <div class="col-md-7">
+            <div class="card-custom p-4 h-100">
+                <h5 class="fw-bold mb-3"><i class="bi bi-journal-plus text-success me-2"></i> Write New Journal Entry
+                </h5>
+                <form method="post" action="{% url 'journal_list' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Entry Title</label>
+                        {{ form.title }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Reflection Content</label>
+                        {{ form.content }}
+                    </div>
+                    <button type="submit" class="btn btn-success text-white w-100 rounded-pill fw-bold shadow-sm">
+                        <i class="bi bi-cpu me-2"></i> Analyze Sentiment & Save Entry
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sentiment Distribution Chart -->
+        <div class="col-md-5">
+            <div class="card-custom p-4 h-100 text-center">
+                <h5 class="fw-bold mb-3"><i class="bi bi-pie-chart text-info me-2"></i> Sentiment Breakdown</h5>
+                {% if journals %}
+                <div style="height: 250px;">
+                    <canvas id="sentimentDoughnutChart"></canvas>
+                </div>
+                {% else %}
+                <div class="py-5 text-muted">
+                    <i class="bi bi-journal-x display-4 mb-2"></i>
+                    <p>No journal entries yet.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Journal History List -->
+    <div class="card-custom p-4">
+        <h5 class="fw-bold mb-3"><i class="bi bi-journal-text me-2"></i> My Journal Entries</h5>
+        {% if journals %}
+        <div class="row g-3">
+            {% for j in journals %}
+            <div class="col-12">
+                <div class="p-3 border rounded-3 bg-white hover-card">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">{{ j.title }}</h5>
+                            <span class="text-muted small"><i class="bi bi-calendar-event me-1"></i> {{
+                                j.created_at|date:"M d, Y \a\t H:i" }}</span>
+                        </div>
+                        <div>
+                            {% if j.sentiment_label == 'Positive' %}
+                            <span class="badge bg-success px-3 py-2 rounded-pill"><i class="bi bi-emoji-smile me-1"></i>
+                                Positive (+{{ j.sentiment_score }})</span>
+                            {% elif j.sentiment_label == 'Negative' %}
+                            <span class="badge bg-danger px-3 py-2 rounded-pill"><i class="bi bi-emoji-frown me-1"></i>
+                                Negative ({{ j.sentiment_score }})</span>
+                            {% else %}
+                            <span class="badge bg-secondary px-3 py-2 rounded-pill"><i
+                                    class="bi bi-emoji-neutral me-1"></i> Neutral ({{ j.sentiment_score }})</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-3 text-break" style="white-space: pre-wrap;">{{ j.content }}</p>
+
+                    <div class="d-flex justify-content-end gap-2 border-top pt-2">
+                        <a href="{% url 'journal_edit' pk=j.pk %}" class="btn btn-sm btn-outline-primary rounded-pill">
+                            <i class="bi bi-pencil me-1"></i> Edit
+                        </a>
+                        <form method="post" action="{% url 'journal_delete' pk=j.pk %}" style="display:inline;"
+                            onsubmit="return confirm('Delete this journal entry?');">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-sm btn-outline-danger rounded-pill">
+                                <i class="bi bi-trash me-1"></i> Delete
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="text-muted text-center py-4 mb-0">No private journal entries recorded.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% if journals %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        renderSentimentChart(
+            'sentimentDoughnutChart',
+            [Number('{{ sent_counts.Positive|default:0 }}'), Number('{{ sent_counts.Neutral|default:0 }}'), Number('{{ sent_counts.Negative|default:0 }}')]
+        );
+    });
+</script>
+{% endif %}
+{% endblock %}

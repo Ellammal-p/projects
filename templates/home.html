@@ -1,0 +1,702 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}MindWell AI - AI-Based Depression Risk Analysis & Mental Wellness Support System{% endblock %}
+
+{% block content %}
+<!-- HERO SECTION (Cinematic Video Background) -->
+<section class="hero-video-container text-center">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="{% static 'images/hero-fallback.jpg' %}">
+        <source src="{% static 'media/hero-wellness.mp4' %}" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+
+    <div class="container hero-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="hero-tag">
+                    <i class="bi bi-cpu-fill text-info"></i> AI-POWERED MENTAL WELLNESS
+                </div>
+                
+                <h1 class="display-3 font-heading fw-extrabold text-white mb-2">
+                    MindWell <span class="text-primary" style="color: #38bdf8 !important;">AI</span>
+                </h1>
+                
+                <h3 class="font-heading fw-semibold text-white-50 mb-3 fs-3">
+                    AI-Based Depression Risk Analysis & Mental Wellness Support
+                </h3>
+                
+                <p class="lead text-light opacity-90 mx-auto mb-4 max-w-750" style="max-width: 760px; font-size: 1.2rem;">
+                    "Understand your wellness patterns through AI-powered assessment, mood tracking, journal insights, and personalized mental-wellness support."
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'take_assessment' %}" class="btn btn-mindwell-primary btn-lg shadow-lg">
+                        <i class="bi bi-clipboard-pulse me-2"></i> Start Assessment
+                    </a>
+                    <a href="{% url 'dashboard' %}" class="btn btn-mindwell-outline btn-lg">
+                        <i class="bi bi-speedometer2 me-2"></i> Explore MindWell AI
+                    </a>
+                    {% else %}
+                    <a href="{% url 'register' %}" class="btn btn-mindwell-primary btn-lg shadow-lg">
+                        <i class="bi bi-clipboard-pulse me-2"></i> Start Assessment
+                    </a>
+                    <a href="#challenge" class="btn btn-mindwell-outline btn-lg">
+                        <i class="bi bi-compass me-2"></i> Explore MindWell AI
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 1: THE CHALLENGE -->
+<section id="challenge" class="story-section bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">THE WELLNESS CHALLENGE</div>
+            <h2 class="section-title text-dark">Understanding Mental Wellness Is Not Always Easy</h2>
+            <p class="section-subtitle mx-auto">Modern life presents complex emotional, physical, and psychological stressors that can be difficult to quantify and navigate without continuous signals.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card text-center">
+                    <div class="icon-box-lg bg-danger-soft mx-auto">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+                    <h5 class="font-heading fw-bold mb-2">Emotional Changes</h5>
+                    <p class="text-muted small mb-0">Understand changes in mood, motivation, energy, and emotional patterns over daily and weekly intervals.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card text-center">
+                    <div class="icon-box-lg bg-warning-soft mx-auto">
+                        <i class="bi bi-moon-stars"></i>
+                    </div>
+                    <h5 class="font-heading fw-bold mb-2">Lifestyle Patterns</h5>
+                    <p class="text-muted small mb-0">Track how sleep quality, daily stress levels, physical activity, and routines directly impact mental balance.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card text-center">
+                    <div class="icon-box-lg bg-primary-soft mx-auto">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h5 class="font-heading fw-bold mb-2">Disconnected Info</h5>
+                    <p class="text-muted small mb-0">Bring assessment results, mood entries, and journal insights together into one unified wellness space.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card text-center">
+                    <div class="icon-box-lg bg-teal-soft mx-auto">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="font-heading fw-bold mb-2">Continuous Support</h5>
+                    <p class="text-muted small mb-0">Provide useful wellness resources, grounding exercises, and supportive suggestions between assessments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 2: A UNIFIED WELLNESS ECOSYSTEM -->
+<section class="story-section" style="background: #f8fafc;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">UNIFIED ECOSYSTEM</div>
+            <h2 class="section-title text-dark">One Intelligent Space for Your Mental Wellness</h2>
+            <p class="section-subtitle mx-auto">MindWell AI integrates clinical assessment tools, longitudinal mood tracking, and NLP text intelligence.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="product-card d-flex gap-3 align-items-start p-4">
+                    <div class="icon-box-lg bg-primary-soft flex-shrink-0 mb-0">
+                        <i class="bi bi-clipboard-pulse fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading fw-bold mb-2">AI Assessment</h4>
+                        <p class="text-muted mb-0">Educational PHQ-9 screening questionnaire paired with Scikit-Learn Machine Learning classification to compute risk indicators.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="product-card d-flex gap-3 align-items-start p-4">
+                    <div class="icon-box-lg bg-warning-soft flex-shrink-0 mb-0">
+                        <i class="bi bi-emoji-smile fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading fw-bold mb-2">Mood Tracking</h4>
+                        <p class="text-muted mb-0">Record daily mood levels (Very Low to Very Good), stress, energy, and sleep patterns visualized over time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="product-card d-flex gap-3 align-items-start p-4">
+                    <div class="icon-box-lg bg-teal-soft flex-shrink-0 mb-0">
+                        <i class="bi bi-journal-text fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading fw-bold mb-2">Journal Intelligence</h4>
+                        <p class="text-muted mb-0">Analyze personal journal text using NLTK VADER Natural Language Processing to detect positive, neutral, or negative polarity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="product-card d-flex gap-3 align-items-start p-4">
+                    <div class="icon-box-lg bg-accent-soft flex-shrink-0 mb-0">
+                        <i class="bi bi-lightbulb fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-heading fw-bold mb-2">Personalized Support</h4>
+                        <p class="text-muted mb-0">Generate supportive, non-clinical wellness suggestions and lifestyle guidance based on user pattern trends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 3: OUR AI WELLNESS VISION -->
+<section class="story-section story-section-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">OUR VISION</div>
+            <h2 class="section-title text-white">Our Vision for Smarter Mental Wellness</h2>
+            <p class="section-subtitle mx-auto text-white-50">Empowering individuals through structured self-awareness and intelligent wellness signals.</p>
+        </div>
+
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="display-5 text-info mb-3"><i class="bi bi-eye"></i></div>
+                    <h4 class="font-heading fw-bold mb-2">Understand</h4>
+                    <p class="text-white-50 small mb-0">Turn daily wellness information into meaningful, actionable patterns.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="display-5 text-warning mb-3"><i class="bi bi-link-45deg"></i></div>
+                    <h4 class="font-heading fw-bold mb-2">Connect</h4>
+                    <p class="text-white-50 small mb-0">Bring assessment, mood, sleep, stress, and journal information together.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="display-5 text-success mb-3"><i class="bi bi-sliders"></i></div>
+                    <h4 class="font-heading fw-bold mb-2">Personalize</h4>
+                    <p class="text-white-50 small mb-0">Provide tailored self-care suggestions based on individual pattern trends.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="display-5 text-danger mb-3"><i class="bi bi-heart-pulse"></i></div>
+                    <h4 class="font-heading fw-bold mb-2">Support</h4>
+                    <p class="text-white-50 small mb-0">Encourage healthy habits and guide users to verified crisis resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 4: UNDERSTANDING YOUR WELLNESS (01 / 02 / 03 / 04 Storytelling) -->
+<section class="story-section bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">THE 4 PILLARS</div>
+            <h2 class="section-title text-dark">Understanding Your Wellness Journey</h2>
+            <p class="section-subtitle mx-auto">Explore the four core dimensions tracked across the MindWell AI ecosystem.</p>
+        </div>
+
+        <!-- 01 Mood & Energy -->
+        <div class="row align-items-center g-5 mb-5 pb-4">
+            <div class="col-lg-6">
+                <div class="number-badge">01</div>
+                <h3 class="font-heading fw-bold mb-3">Mood & Energy Patterns</h3>
+                <p class="text-muted mb-4">Track daily emotional changes, motivation levels, and energy fluctuations to identify positive triggers and periods of fatigue.</p>
+                <ul class="list-unstyled text-secondary">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 5-Point Emotional Scale (Very Low to Very Good)</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Energy & Motivation Tracking</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Longitudinal Historical Graphs</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card p-4 shadow-lg text-center border">
+                    <i class="bi bi-emoji-smile text-warning display-3 mb-2"></i>
+                    <h5 class="fw-bold font-heading">Mood Trajectory Analytics</h5>
+                    <p class="text-muted small">Visualized continuously in your personal dashboard.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 02 Sleep & Stress -->
+        <div class="row align-items-center g-5 mb-5 pb-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="number-badge">02</div>
+                <h3 class="font-heading fw-bold mb-3">Sleep & Stress Patterns</h3>
+                <p class="text-muted mb-4">Monitor sleep quality and daily stress levels. Observe how sleep consistency impacts emotional resilience and cognitive focus.</p>
+                <ul class="list-unstyled text-secondary">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-teal me-2" style="color: #0d9488;"></i> Sleep Hygiene & Quality Metrics</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-teal me-2" style="color: #0d9488;"></i> Stress Level Observation</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-teal me-2" style="color: #0d9488;"></i> Daily Routine Tracking</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card p-4 shadow-lg text-center border">
+                    <i class="bi bi-moon-stars text-primary display-3 mb-2"></i>
+                    <h5 class="fw-bold font-heading">Rest & Recovery Signals</h5>
+                    <p class="text-muted small">Sleep and stress trends mapped over 7-day cycles.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03 Journal & Sentiment -->
+        <div class="row align-items-center g-5 mb-5 pb-4">
+            <div class="col-lg-6">
+                <div class="number-badge">03</div>
+                <h3 class="font-heading fw-bold mb-3">Journal & Sentiment Insights</h3>
+                <p class="text-muted mb-4">Express your thoughts freely in private journal entries. MindWell AI applies NLTK Natural Language Processing to classify text sentiment polarity.</p>
+                <div class="p-3 bg-light border-start border-4 border-info rounded-3 mb-3 small text-secondary">
+                    <i class="bi bi-info-circle-fill me-1 text-info"></i>
+                    <strong>Notice:</strong> Sentiment analysis is a general text-analysis feature and is NOT a medical diagnosis. It serves as an additional wellness reflection signal.
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card p-4 shadow-lg text-center border">
+                    <i class="bi bi-journal-text text-success display-3 mb-2"></i>
+                    <h5 class="fw-bold font-heading">NLTK NLP Sentiment Polarity</h5>
+                    <p class="text-muted small">Classifies text entries as Positive, Neutral, or Negative.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 AI Insights -->
+        <div class="row align-items-center g-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="number-badge">04</div>
+                <h3 class="font-heading fw-bold mb-3">AI Wellness Insights</h3>
+                <p class="text-muted mb-4">Combine available user information to provide supportive, non-clinical wellness suggestions and habit reminders.</p>
+                <ul class="list-unstyled text-secondary">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-accent me-2" style="color: #8b5cf6;"></i> Sleep Consistency & Relaxation Tips</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-accent me-2" style="color: #8b5cf6;"></i> 4-4-4-4 Box Breathing Exercises</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-accent me-2" style="color: #8b5cf6;"></i> Professional Helpline Reminders when appropriate</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card p-4 shadow-lg text-center border">
+                    <i class="bi bi-cpu text-accent display-3 mb-2" style="color: #8b5cf6;"></i>
+                    <h5 class="fw-bold font-heading">Intelligent Pattern Analysis</h5>
+                    <p class="text-muted small">Non-diagnostic wellness recommendations tailored to your log history.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 5: CORE AI FEATURES -->
+<section class="story-section" style="background: #f8fafc;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">AI INTELLIGENCE</div>
+            <h2 class="section-title text-dark">AI-Powered Wellness Intelligence</h2>
+            <p class="section-subtitle mx-auto">Discover the smart features engineered inside MindWell AI.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-primary-soft"><i class="bi bi-clipboard-pulse"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Risk Indicator</h5>
+                    <p class="text-muted small mb-0">Educational screening & risk indicator computed from PHQ-9 responses using Scikit-Learn ML classification.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-teal-soft"><i class="bi bi-chat-left-quote"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Sentiment Analysis</h5>
+                    <p class="text-muted small mb-0">Natural language processing evaluates journal text for general emotional polarity signals.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-warning-soft"><i class="bi bi-activity"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Pattern Detection</h5>
+                    <p class="text-muted small mb-0">Tracks changes across mood, stress, energy, and sleep data points over time.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-accent-soft"><i class="bi bi-lightbulb"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Personalized Suggestions</h5>
+                    <p class="text-muted small mb-0">Provides supportive, non-clinical wellness recommendations focused on self-care and routine.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-primary-soft"><i class="bi bi-graph-up"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Progress Tracking</h5>
+                    <p class="text-muted small mb-0">Visualizes score trends over time with dynamic Chart.js analytics graphics.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-danger-soft"><i class="bi bi-telephone"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Wellness Resources</h5>
+                    <p class="text-muted small mb-0">Connects users with verified 24/7 tele-mental health helplines and relaxation exercises.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 6: YOUR DAILY CHECK-IN -->
+<section class="story-section bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="section-label">2-MINUTE CHECK-IN</div>
+                <h2 class="section-title text-dark">A Simple Daily Wellness Check-In</h2>
+                <p class="section-subtitle mx-auto mb-5">Record today's mood, stress, energy, and sleep parameters in under two minutes.</p>
+
+                <!-- Check-in Form Card -->
+                <div class="checkin-control-card text-start shadow-lg">
+                    <form method="post" action="{% url 'mood_list' %}">
+                        {% csrf_token %}
+                        
+                        <!-- 1. Mood Rating -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold font-heading mb-2">1. How is your mood today?</label>
+                            <div class="mood-selector-grid">
+                                <label class="mood-radio-btn" title="Very Low">
+                                    <input type="radio" name="mood_score" value="1" required> 😫
+                                </label>
+                                <label class="mood-radio-btn" title="Low">
+                                    <input type="radio" name="mood_score" value="2"> 😔
+                                </label>
+                                <label class="mood-radio-btn selected" title="Neutral">
+                                    <input type="radio" name="mood_score" value="3" checked> 😐
+                                </label>
+                                <label class="mood-radio-btn" title="Good">
+                                    <input type="radio" name="mood_score" value="4"> 🙂
+                                </label>
+                                <label class="mood-radio-btn" title="Very Good">
+                                    <input type="radio" name="mood_score" value="5"> 😊
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 2. Optional Note -->
+                        <div class="mb-4">
+                            <label for="checkinNote" class="form-label fw-bold font-heading mb-1">2. Reflection Note (Optional)</label>
+                            <textarea id="checkinNote" name="note" class="form-control rounded-3" rows="2" placeholder="Briefly reflect on your day, stress level, or sleep quality..."></textarea>
+                        </div>
+
+                        <div class="d-grid">
+                            {% if user.is_authenticated %}
+                            <button type="submit" class="btn btn-mindwell-primary py-3 font-heading fw-bold fs-6">
+                                <i class="bi bi-check2-circle me-2"></i> Save Today's Check-In
+                            </button>
+                            {% else %}
+                            <a href="{% url 'login' %}" class="btn btn-mindwell-primary py-3 font-heading fw-bold fs-6 text-center">
+                                Login to Save Daily Check-In
+                            </a>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 7: HOW MINDWELL AI WORKS -->
+<section class="story-section story-section-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">WORKFLOW</div>
+            <h2 class="section-title text-white">How MindWell AI Works</h2>
+            <p class="section-subtitle mx-auto text-white-50">Four simple steps to track and support your mental wellness journey.</p>
+        </div>
+
+        <div class="row g-4 text-center">
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="number-badge">01</div>
+                    <h4 class="font-heading fw-bold text-white mb-2">Check In</h4>
+                    <p class="text-white-50 small mb-0">Answer wellness screening questions and record daily mood & sleep logs.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="number-badge">02</div>
+                    <h4 class="font-heading fw-bold text-white mb-2">Connect Data</h4>
+                    <p class="text-white-50 small mb-0">Bring assessment, mood, sleep, stress, and journal information together.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="number-badge">03</div>
+                    <h4 class="font-heading fw-bold text-white mb-2">Discover Patterns</h4>
+                    <p class="text-white-50 small mb-0">The system analyzes available information and identifies trends over time.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="p-4 rounded-4 border border-secondary border-opacity-25 bg-dark">
+                    <div class="number-badge">04</div>
+                    <h4 class="font-heading fw-bold text-white mb-2">Take Action</h4>
+                    <p class="text-white-50 small mb-0">Receive educational insights, self-care suggestions, and relevant resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 8: DASHBOARD PREVIEW -->
+<section class="story-section bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">ANALYTICS HUB</div>
+            <h2 class="section-title text-dark">Intelligent Wellness Dashboard</h2>
+            <p class="section-subtitle mx-auto">Visualizing risk indicators, mood trajectories, and journal sentiment polarity.</p>
+        </div>
+
+        <div class="glass-card p-4 p-md-5 border shadow-lg">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <h5 class="font-heading fw-bold mb-3"><i class="bi bi-graph-up-arrow text-primary me-2"></i>PHQ-9 Score Trajectory</h5>
+                    <div style="height: 280px;">
+                        <canvas id="previewScoreChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5 class="font-heading fw-bold mb-3"><i class="bi bi-pie-chart text-success me-2"></i>Journal Sentiment NLP</h5>
+                    <div style="height: 240px;">
+                        <canvas id="previewSentimentChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 9: MOOD TRACKING -->
+<section class="story-section" style="background: #f8fafc;">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="section-label">MOOD LOGGING</div>
+                <h2 class="section-title text-dark">Comprehensive Mood & Energy Tracking</h2>
+                <p class="text-muted mb-4">Record your daily emotional state with reflection notes. Track weekly averages, stress patterns, and energy levels to build self-awareness.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'mood_list' %}" class="btn btn-mindwell-primary">
+                        <i class="bi bi-emoji-smile me-1"></i> Open Mood Tracker
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-card text-center p-4">
+                    <div class="display-3 text-warning mb-2">🙂</div>
+                    <h4 class="font-heading fw-bold mb-1">Daily Mood Check-In</h4>
+                    <p class="text-muted small">Log daily ratings and view your weekly mood curve.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 10: JOURNAL SECTION -->
+<section class="story-section bg-white">
+    <div class="container">
+        <div class="row align-items-center g-5 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <div class="section-label">NLP JOURNALING</div>
+                <h2 class="section-title text-dark">Write. Reflect. Understand.</h2>
+                <p class="text-muted mb-4">Maintain a private digital journal. MindWell AI applies Natural Language Processing to detect positive, neutral, or negative sentiment polarity in text entries.</p>
+                
+                <div class="p-3 bg-light border-start border-4 border-primary rounded-3 mb-4 small text-secondary">
+                    <i class="bi bi-shield-check me-1 text-primary"></i>
+                    <strong>Notice:</strong> Sentiment analysis is a general text-analysis feature and is not a medical diagnosis.
+                </div>
+
+                <a href="{% url 'journal_list' %}" class="btn btn-mindwell-primary">
+                    <i class="bi bi-journal-text me-1"></i> Open Private Journal
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="product-card p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h6 class="fw-bold font-heading mb-0">Recent Journal Entry</h6>
+                        <span class="badge bg-success rounded-pill">Positive Sentiment</span>
+                    </div>
+                    <p class="text-secondary small italic mb-0">"Taking a walk in the evening helped me clear my head and refocus on my upcoming goals."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 11: PERSONALIZED WELLNESS -->
+<section class="story-section" style="background: #f8fafc;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">WELLNESS SUGGESTIONS</div>
+            <h2 class="section-title text-dark">Insights Designed Around Your Patterns</h2>
+            <p class="section-subtitle mx-auto">Non-clinical wellness recommendations tailored to support daily resilience.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-primary-soft"><i class="bi bi-moon-stars"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Sleep Routine</h5>
+                    <p class="text-muted small mb-0">"Your sleep pattern has been inconsistent. Consider maintaining a regular sleep schedule."</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-danger-soft"><i class="bi bi-activity"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Stress Management</h5>
+                    <p class="text-muted small mb-0">"Your recent stress entries appear elevated. Consider taking a short breathing or relaxation break."</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-warning-soft"><i class="bi bi-emoji-smile"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Mood Support</h5>
+                    <p class="text-muted small mb-0">"Your mood entries have varied recently. Journaling or talking with someone you trust may be helpful."</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="product-card">
+                    <div class="icon-box-lg bg-teal-soft"><i class="bi bi-journal-check"></i></div>
+                    <h5 class="font-heading fw-bold mb-2">Daily Routine</h5>
+                    <p class="text-muted small mb-0">"Small consistent routines can support overall emotional wellbeing throughout the day."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 12: SUPPORT & RESOURCES -->
+<section class="story-section bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label">RESOURCES</div>
+            <h2 class="section-title text-dark">Mental Wellness & Crisis Support</h2>
+            <p class="section-subtitle mx-auto">Access evidence-informed self-care tools and 24/7 verified emergency helplines.</p>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card p-4">
+                    <i class="bi bi-wind text-teal display-5 mb-3" style="color: #0d9488;"></i>
+                    <h5 class="font-heading fw-bold mb-2">Guided Breathing</h5>
+                    <p class="text-muted small mb-3">Practice 4-4-4-4 Box Breathing for acute relaxation and stress reduction.</p>
+                    <a href="{% url 'breathing' %}" class="btn btn-sm btn-outline-success rounded-pill fw-bold">Start Breathing</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card p-4">
+                    <i class="bi bi-eye text-primary display-5 mb-3"></i>
+                    <h5 class="font-heading fw-bold mb-2">5-4-3-2-1 Grounding</h5>
+                    <p class="text-muted small mb-3">Use sensory grounding technique to anchor your mind during overwhelming moments.</p>
+                    <a href="{% url 'breathing' %}" class="btn btn-sm btn-outline-primary rounded-pill fw-bold">Open Grounding</a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="product-card p-4">
+                    <i class="bi bi-telephone-fill text-danger display-5 mb-3"></i>
+                    <h5 class="font-heading fw-bold mb-2">Verified Helplines</h5>
+                    <p class="text-muted small mb-3">Connect 24/7 with Tele-MANAS (14416), KIRAN (1800-599-0019), or 988.</p>
+                    <button class="btn btn-sm btn-danger rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#sosModal">View Helplines</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 13: PRIVACY SECTION -->
+<section class="story-section story-section-dark">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="section-label">DATA SECURITY</div>
+                <h2 class="section-title text-white">Your Wellness Data Matters</h2>
+                <p class="section-subtitle mx-auto mb-4 text-white-50">MindWell AI is engineered with Django authentication, strict user authorization checks, and CSRF protection to keep your logs strictly private.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3 text-white-50 small">
+                    <span><i class="bi bi-shield-lock text-info me-1"></i> User Account Isolation</span>
+                    <span><i class="bi bi-key text-warning me-1"></i> CSRF Form Protection</span>
+                    <span><i class="bi bi-database-check text-success me-1"></i> Encrypted Session Auth</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION 14: SAFETY DISCLAIMER -->
+<section class="container my-5">
+    <div class="glass-card p-4 border-start border-4 border-warning shadow-md">
+        <div class="d-flex align-items-start">
+            <i class="bi bi-shield-exclamation text-warning display-5 me-3"></i>
+            <div>
+                <h5 class="font-heading fw-bold text-dark mb-1">Important Notice</h5>
+                <p class="mb-0 text-muted small" style="line-height: 1.6;">
+                    This system is designed for educational and mental-wellness support purposes only. It does not diagnose depression or any other medical condition and does not replace professional medical advice. If your responses indicate significant emotional distress, please consult a qualified mental-health professional or contact a helpline immediately.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mood Radio Selector Toggle
+        document.querySelectorAll('.mood-radio-btn input').forEach(radio => {
+            radio.addEventListener('change', function () {
+                document.querySelectorAll('.mood-radio-btn').forEach(btn => btn.classList.remove('selected'));
+                this.closest('.mood-radio-btn').classList.add('selected');
+            });
+        });
+
+        // Preview Charts Initialization
+        renderScoreHistoryChart(
+            'previewScoreChart',
+            ['Sep 01', 'Sep 05', 'Sep 10', 'Sep 15'],
+            [14, 11, 8, 5]
+        );
+
+        renderSentimentChart(
+            'previewSentimentChart',
+            [5, 3, 2]
+        );
+    });
+</script>
+{% endblock %}
